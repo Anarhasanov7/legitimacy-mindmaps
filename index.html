@@ -389,86 +389,139 @@ story: `# THE WHOLE THING — Story + Evidence in One Map
 - If it doesn't → proves legitimacy lives outside the founder's reach → policy should target judges/platforms, not founders
 - Either way you learn something the field doesn't know
 ## METHOD TOOLBOX — Deep Problem/Solution Trees
-*Click any method → each problem is its own branch: WHAT the problem is → HOW BIG it is → THE FIX*
+*Click any method → each problem is its own branch: WHAT the problem is → HOW BIG → each FIX explained*
 
 ### PART A — YOUR ATENA METHODS (The 3 Designs You Actually Run)
 
 #### A1. FIELD EXPERIMENT / RCT — Article 1 (Your Causal Engine)
-- **1. Who Evaluates & What They Do:** Nascent entrepreneurs randomized into Treatment (12h legitimacy module) vs Control. Judges = real market stakeholders; you measure the founder-side node + objective milestones.
-- **2. How They Do It:** Random assignment → T0 baseline → 12h module across 5 capabilities → T1 post-test → T4 follow-up. Analysis: ITT + ANCOVA/DiD on self-legitimacy and perceived legitimacy scales.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: attrition* — founders drop out between T0→T1→T4 → if leavers differ from stayers, estimates bias → severity: HIGH (most common field-RCT killer) → *Fix:* ITT estimation + leaver/stayer baseline comparison + multiple imputation
-  - *Problem: contamination/spillovers* — treated founders share content with control peers → treatment effect shrinks artificially → severity: MEDIUM-HIGH → *Fix:* cohort separation + staggered rollout + measure spillovers directly
-  - *Problem: self-report bias* — founders inflate confidence on survey items → severity: MEDIUM → *Fix:* triangulate with objective milestones (registrations, applications, revenue) + pitch-deck text scores
-  - *Problem: small sample power* — field n often <300 → real effects can look null → severity: HIGH → *Fix:* pre-registered power analysis + report effect sizes + CIs, not just p-values
-- **4. How You Apply It:** Article 1 — the causal test that legitimacy can be trained; the design the literature has never run.
+- **1. Who & What:** Nascent entrepreneurs randomly split into Treatment (12h module) vs Control. You measure the founder-side of the dyad + objective milestones.
+- **2. How:** Random assignment → T0 baseline → 12h module → T1 post-test → T4 follow-up.
+- **3. Problems & Fixes:**
+  - **Problem: small sample / power**
+    - What it means: too few founders → random noise can hide a real effect → "no effect" even if training works
+    - How big: HIGH — the #1 attack on field experiments
+    - Fix 1 — pre-registered power analysis: BEFORE collecting data, calculate how many founders you need → "too small?" becomes a number you defend upfront
+    - Fix 2 — ITT: analyze everyone randomly ASSIGNED, even skippers → groups stay comparable
+    - Fix 3 — effect size + CI: show HOW BIG the effect is, not just "significant/not"
+  - **Problem: attrition (founders drop out)**
+    - What it means: if quitters differ from stayers, groups stop being comparable → silent bias
+    - How big: HIGH — most common field-RCT killer
+    - Fix 1 — leaver/stayer comparison: compare dropouts' T0 answers to stayers' → same = attrition is random and harmless
+    - Fix 2 — multiple imputation: estimate missing answers from what you know about that founder
+    - What remains: imputation assumes missingness is explainable by observed data
+  - **Problem: contamination (control learns the content)**
+    - What it means: treated founders share module content with control peers → gap shrinks artificially
+    - How big: MEDIUM-HIGH — same program = they talk
+    - Fix 1 — cohort separation: different time slots → they never meet, no leak channel
+    - Fix 2 — staggered rollout: control gets the module AFTER T4 → clean pre-treatment answers
+    - Fix 3 — measure the leak: ask control "did you hear about the module?" → quantify, don't guess
+  - **Problem: self-report only**
+    - What it means: asking "do you feel legitimate?" measures confidence, not judges' views
+    - How big: MEDIUM
+    - Fix 1 — objective milestones: registrations, applications, revenue
+    - Fix 2 — pitch-deck text scores: Ghods BJM 2026 algorithm = external reproducible score
+- **4. How You Apply It:** Article 1 — the causal test the literature has never run.
 
 #### A2. SEMI-STRUCTURED INTERVIEWS — Article 2 (Your Mechanism Tracer)
-- **1. Who Evaluates & What They Do:** You interview founders from both arms — high vs low responders. ~30–60 min each.
-- **2. How They Do It:** Interview guide on the 5 capabilities → record → transcribe → thematic coding (Gioia: 1st-order codes → 2nd-order themes → aggregate dimensions). Anchor: Aldebert (2021/23) ran 34 interviews / 24 months in the same ecosystem.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: coding subjectivity* — researcher reads meaning into quotes → the standard attack on all qualitative work → severity: HIGH → *Fix:* Gioia data structure table (show the raw quote → code → theme → dimension chain) + dual coders + Cohen's kappa
-  - *Problem: recall bias* — founders reconstruct their story after the fact → memory edits reality → severity: MEDIUM → *Fix:* ask concrete episodes not opinions ("walk me through your last pitch") + triangulate vs survey scores
-  - *Problem: social desirability* — founders tell you training "worked" → severity: MEDIUM → *Fix:* anonymized transcripts + neutral framing + compare high vs low responders (extreme-case sampling)
-  - *Problem: small n* — can't generalize statistically → severity: HIGH if you claim prevalence → *Fix:* the goal is MECHANISM not prevalence — extreme-case sampling IS the design
-- **4. How You Apply It:** Article 2 — explains HOW/WHY the treatment works inside the founder; complements Article 1's causal estimate.
+- **1. Who & What:** You interview founders from both arms — high vs low responders. ~30–60 min each.
+- **2. How:** Guide built on the 5 capabilities → record → transcribe → Gioia coding. Anchor: Aldebert ran 34 interviews / 24 months in this ecosystem.
+- **3. Problems & Fixes:**
+  - **Problem: coding subjectivity**
+    - What it means: YOU turn quotes into themes — committee could say you read your own theory into it
+    - How big: HIGH — default attack on qualitative work
+    - Fix 1 — Gioia data structure: table showing raw quote → 1st-order code → 2nd-order theme → aggregate dimension → every claim traceable to a quote
+    - Fix 2 — dual coders + kappa: second researcher codes same transcripts; kappa = agreement score (> .80 strong)
+    - What remains: kappa shows agreement, not truth — keep raw quotes visible
+  - **Problem: recall bias**
+    - What it means: months later, founders tell a cleaned-up version — memory edits reality
+    - How big: MEDIUM
+    - Fix 1 — concrete episodes: "walk me through your last pitch" produces details, not storytelling
+    - Fix 2 — triangulation: compare what they SAY vs survey scores and milestones
+  - **Problem: social desirability**
+    - What it means: founders tell you training "worked" to please you
+    - How big: MEDIUM
+    - Fix — anonymized transcripts + neutral framing + interview LOW responders too
+  - **Problem: small n**
+    - What it means: 20–30 interviews can't estimate prevalence
+    - How big: LOW — not the goal
+    - Fix — purposive sampling: comparing high vs low responders IS the design (mechanism, not counting)
+- **4. How You Apply It:** Article 2 — explains HOW/WHY the treatment works inside the founder.
 
 #### A3. LONGITUDINAL MULTI-WAVE SURVEY — T0 → T1 → T4 (Your Measurement Spine)
-- **1. Who Evaluates & What They Do:** Founders report self-legitimacy + perceived standing at 3+ time points.
-- **2. How They Do It:** Same validated scales every wave (Bertrand self-legitimacy + perceived legitimacy) at T0/T1/T4. Analysis: repeated-measures multilevel model (waves nested in persons); treatment × time interaction = training effect. Same panel logic as Ghods (412 firm-years) but at founder level.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: common-method variance (CMV)* — same person, same instrument, same sitting → correlations inflated → severity: HIGH → *Fix:* temporal separation between waves + different scale anchors + objective markers
-  - *Problem: panel conditioning* — founders answer differently because they've seen the survey before → severity: MEDIUM → *Fix:* control group at every wave absorbs the conditioning effect
-  - *Problem: panel attrition* — cumulative loss across waves → severity: HIGH → *Fix:* ITT + multiple imputation + incentives per wave
-  - *Problem: maturation* — founders change over time regardless of treatment → severity: MEDIUM → *Fix:* RCT design separates growth from treatment effect
-- **4. How You Apply It:** The measurement backbone of Article 1 — your defense against "one-shot survey" critiques.
+- **1. Who & What:** Founders report self-legitimacy + perceived standing at 3+ time points.
+- **2. How:** Same validated scales every wave; treatment × time interaction = the effect.
+- **3. Problems & Fixes:**
+  - **Problem: CMV (common-method variance)**
+    - What it means: predictor + outcome from the same questionnaire → correlation inflated by HOW you asked, not reality
+    - How big: MEDIUM
+    - Fix 1 — temporal separation: different items at different times → one sitting can't fake the link
+    - Fix 2 — different question formats: mix scales/wording so answering-style can't drive correlation
+    - Fix 3 — objective markers: milestones + text scores anchor answers outside the questionnaire
+  - **Problem: panel conditioning**
+    - What it means: seeing the survey repeatedly makes founders MORE aware — measurement becomes a mini-treatment
+    - How big: MEDIUM
+    - Fix — control group fills the same survey at the same waves → conditioning hits both arms equally → cancels out
+  - **Problem: maturation**
+    - What it means: founders improve naturally over time — change isn't necessarily training
+    - How big: HIGH without control, near-zero with it
+    - Fix — randomized control: both groups mature together; treated group's EXTRA change = the training effect
+- **4. How You Apply It:** The measurement backbone of Article 1.
 
 ### PART B — METHODS FROM THE LITERATURE (What Others Use)
 
-### B1. CONJOINT / FACTORIAL EXPERIMENT (The Evaluator Cognition Standard)
-- **1. Who Evaluates & What They Do:** Human judges (bankers, consumers, investors; Siraz's 31–781 evaluators) read hypothetical venture profiles and assign legitimacy/funding scores.
-- **2. How They Do It:** Software generates randomized cue bundles; each judge rates 16–32 profiles. Multilevel regression models Level-1 ratings nested inside Level-2 judges.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: rating fatigue* — judges go on autopilot after ~30 profiles → responses get noisy → severity: MEDIUM → *Fix:* orthogonal fractional factorial design caps at 16–32 profiles per judge
-  - *Problem: non-independence* — one judge's 16 ratings correlate → standard errors too small → severity: HIGH if ignored → *Fix:* random-effects hierarchical model clusters errors by judge
-  - *Problem: hypothetical bias* — vignette judgments ≠ real funding decisions → severity: MEDIUM → *Fix:* high-realism pitch vignettes mimicking real applications
-- **4. How You Apply It:** Planned Article 4 — randomized atEnA pitch profiles to real regional bank officers and grant committees.
+#### B1. CONJOINT / FACTORIAL EXPERIMENT (Siraz's method — the evaluator standard)
+- **1. Who & What:** Human judges rate made-up venture profiles — "how legitimate is this?"
+- **2. How:** Software generates random cue bundles; each judge rates 16–32 profiles.
+- **3. Problems & Fixes:**
+  - **Problem: rating fatigue**
+    - What it means: after ~16+ profiles judges skim → noisy data
+    - Fix — "orthogonal" design: profiles randomized so every combination is still tested while each judge sees few
+  - **Problem: non-independence**
+    - What it means: one judge's 16 ratings correlate → statistics overconfident
+    - Fix — multilevel model: ratings nested inside judges, errors clustered per judge
+  - **Problem: hypothetical bias**
+    - What it means: rating a paragraph ≠ risking real money
+    - Fix — realistic pitch vignettes + attention checks
+- **4. For you:** Planned Article 4 — real bank officers rating atEnA pitch profiles.
 
-### B2. COMPUTATIONAL TEXT ANALYSIS (Objective Dyadic Measurement)
-- **1. Who Evaluates & What They Do:** NLP algorithms act as automated evaluators of written artifacts (websites, pitch decks, press releases) paired with target audiences.
-- **2. How They Do It:** Algorithms parse text into multi-dimensional legitimacy dictionaries (pragmatic, moral, cognitive, regulatory). Each firm gets a composite score + per-dimension metrics.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: contextual nuance* — algorithms misread sarcasm/complex language → severity: MEDIUM → *Fix:* multi-stage human expert calibration of dictionary weights
-  - *Problem: single-audience bias* — text scored for one audience misses others → *Fix:* dyadic audience modeling (score relative to audience type)
-  - *Problem: validity question* — does the score reflect real outcomes? → severity: HIGH → *Fix:* econometric validation against out-of-sample venture failure data
-- **4. How You Apply It:** Objective check on participant pitch decks — kills common-method variance critiques.
+#### B2. COMPUTATIONAL TEXT ANALYSIS (Objective scoring)
+- **1. Who & What:** An NLP algorithm scores venture texts (websites, pitch decks) against legitimacy dictionaries.
+- **2. How:** Text → per-dimension legitimacy scores → composite score per firm.
+- **3. Problems & Fixes:**
+  - **Problem: nuance blindness**
+    - What it means: algorithms misread sarcasm/context
+    - Fix — human experts calibrate the dictionary
+  - **Problem: validity**
+    - What it means: does the score reflect reality?
+    - Fix — validate against real venture survival (Ghods BJM did this)
+- **4. For you:** Objective check on pitch decks — kills "it's all self-report."
 
-### B3. QUALITATIVE CASE STUDY (Mechanism & Process Discovery)
-- **1. Who Evaluates & What They Do:** The researcher evaluates incubator managers, mentors, entrepreneurs across longitudinal timeframes.
-- **2. How They Do It:** 60–90 min semi-structured interviews + committee observation + pitch logs + internal docs. Coded via Gioia / process-tracing.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: retrospective recall bias* — founders misremember early events → severity: MEDIUM → *Fix:* triangulate interviews with real-time archival records and meeting minutes
-  - *Problem: researcher subjectivity* — investigator shapes interpretation → severity: HIGH → *Fix:* dual-coder inter-rater checks + Gioia audit trail
-  - *Problem: no generalizability* — one case can't speak for all → severity: HIGH → *Fix:* multi-case comparative designs (successful vs stalled structures)
-- **4. How You Apply It:** Article 2 — interviewing high vs low responders to trace the internal learning process.
+#### B3. QUALITATIVE CASE STUDY (Mechanism discovery — Aldebert's method)
+- **1. Who & What:** Researcher embeds inside an accelerator/incubator for months.
+- **2. How:** Interviews + observation + documents → coded over time.
+- **3. Problems & Fixes:**
+  - **Problem: recall bias** — founders misremember → Fix: triangulate with real-time records
+  - **Problem: researcher subjectivity** — your lens shapes findings → Fix: dual coders + audit trail
+  - **Problem: one case can't generalize** → Fix: multi-case comparison (worked vs stalled)
+- **4. For you:** The model for Article 2's interview design.
 
-### B4. QUANTITATIVE SURVEY (Self-Reported Perceptions)
-- **1. Who Evaluates & What They Do:** Active founders evaluate themselves and perceived market standing via multi-item Likert scales.
-- **2. How They Do It:** Structured digital questionnaires → CFA, SEM, cluster analysis.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: common-method variance* — IV and DV on the same survey → inflated correlations → severity: HIGH → *Fix:* temporal spacing between waves + negative control items
-  - *Problem: social desirability* — founders overstate confidence → severity: MEDIUM → *Fix:* anonymized administration + indirect wording
-  - *Problem: no causal direction* — correlation can't prove causality → severity: HIGH → *Fix:* anchor within an RCT framework (your design)
-- **4. How You Apply It:** Core instrument for self-legitimacy (Bertrand) + perceived legitimacy (Alexiou & Wiggins).
+#### B4. QUANTITATIVE SURVEY (Self-reported perceptions)
+- **1. Who & What:** Founders rate themselves on multi-item scales.
+- **2. How:** Structured questionnaire → factor/cluster analysis.
+- **3. Problems & Fixes:**
+  - **Problem: CMV** — same-survey correlations inflated → Fix: temporal spacing + different formats
+  - **Problem: social desirability** — founders overstate → Fix: anonymized + indirect wording
+  - **Problem: no causality** — correlation only → Fix: anchor inside your RCT
+- **4. For you:** The instrument for self-legitimacy (Bertrand) + perceived legitimacy.
 
-### B5. SOCIAL REPRESENTATIONS SURVEY (Cognitive Mapping)
-- **1. Who Evaluates & What They Do:** Cohorts of practicing entrepreneurs produce spontaneous word associations for "the legitimate entrepreneur."
-- **2. How They Do It:** Respondents write 5 words + rank importance (1–5). Vergès structural matrix (frequency × rank) separates central core from peripheral beliefs.
-- **3. Problems & Fixes (each expanded):**
-  - *Problem: lexical ambiguity* — synonyms and varied phrasing fragment the data → severity: MEDIUM → *Fix:* standardized lemmatization + semantic grouping dictionaries
-  - *Problem: small sample sensitivity* — rank orders unstable with few respondents → *Fix:* bootstrapped rank-order significance testing
-  - *Problem: cross-language differences* — words don't translate 1:1 → *Fix:* comparative multi-group analysis (domestic vs international)
-- **4. How You Apply It:** Rationale for treating the Franco-Italian context as containing distinct institutional reference frameworks.
+#### B5. SOCIAL REPRESENTATIONS SURVEY (Cognitive mapping — Ghods E&RD)
+- **1. Who & What:** Entrepreneurs write the first 5 words that come to mind for "legitimate entrepreneur" + rank them.
+- **2. How:** Frequency × importance matrix separates core beliefs from peripheral ones.
+- **3. Problems & Fixes:**
+  - **Problem: word ambiguity** — synonyms fragment data → Fix: lemmatization (rule-based grouping) + dual coders
+  - **Problem: cross-language** — words don't translate 1:1 → Fix: compare groups separately
+- **4. For you:** Rationale for France vs Italy as distinct reference frameworks.
+
 ## THE SCHOLARLY NETWORK & MASTER CANON (Structured Breakdown)
 *Uniform 4-line structure: 1. Research Question → 2. Core Finding / Verdict → 3. Methodology & Epistemic Base → 4. How You Use It in Thesis*
 

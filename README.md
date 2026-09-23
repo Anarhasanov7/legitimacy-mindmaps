@@ -74,9 +74,9 @@ Key insight: a venture's state can flip purely because the *societal yardstick* 
 - **Siraz's evidence base:** ~20,000 conjoint ratings across 4 experiments.
 - **Rule of thumb:** n per group ≈ 16/d² for 80% power.
 
-## Fresh ammunition — 46 recent legitimacy papers (2024–26)
+## Fresh ammunition — 49 papers + the 3 validated scales
 
-*P01–P30 = most-cited canon-citers (OpenAlex) · P31–P46 = your Scopus export, sorted by cites. Stable IDs — reorder freely (one line each). Formula first, names second, solves: = problem fixed.*
+*P01–P30 = most-cited canon-citers (OpenAlex) · P31–P46 = Scopus export · P47–P49 = validated scales. Stable IDs — reorder freely (one line each). Formula first, names second, solves: = problem fixed.*
 *Grouped by level on the dyad: **the judge** → **the connection** → **the object** → **the field**. Most new work sits in *the connection* — where this thesis lives.*
 
 **L1 · The judge — evaluator side**
@@ -132,6 +132,11 @@ Key insight: a venture's state can flip purely because the *societal yardstick* 
 - **[P30]** accelerator × ecosystem = complement/substitute — Qin '25 JIBS · 3 · *solves: uniform effect→ecosystem moderator*
 - **[P45]** invoked past → evaluative authorization — Markman et al. '26 JMS · 0 · *solves: legacy divergence→authorization theory*
 - **[P46]** digital forces → evaluation assumptions break — Clemente et al. '26 JMS · 0 · *solves: stable audiences→rethink*
+
+**S · Scale anchors — validated instruments (any year)**
+- **[P47]** self-legitimacy scale (4 dims) → impostor syndrome → intention↓ — Bertrand, Benamara & Aldebert '25 HAL · wp · *solves: self-legitimacy never measured → validated scale n=122*
+- **[P48]** individual perceptions → pragmatic/moral/cognitive legitimacy scale — Alexiou & Wiggins '19 Strategic Organization · 138 · *solves: collective-only measures → individual-perception scale*
+- **[P49]** entrepreneurial self-efficacy scale — Chen, Greene & Crick '98 JBV · ~4k · *solves: no ESE measure → validated scale (Q6's foil)*
 
 ## The committee's hardest questions — short answers
 

@@ -20,7 +20,8 @@
 <div id="sidebar">
   <h1>Legitimacy Mind Maps</h1>
   <p>Select a map view below. Click nodes to expand or collapse. Scroll to zoom.</p>
-  <button class="btn active" data-map="punchlines"><b>1. Field Map (Context & Scope First)</b><small>Where it sits → Title (Punchline) → 1-line Verdict → Explanation</small></button>
+  <button class="btn active" data-map="story"><b>0. START HERE — The Story</b><small>No jargon. The whole field + your thesis in 2 minutes</small></button>
+  <button class="btn" data-map="punchlines"><b>1. Field Map (Context & Scope First)</b><small>Where it sits → Title (Punchline) → 1-line Verdict → Explanation</small></button>
   <button class="btn" data-map="methods"><b>2. Method Toolbox (Deep Breakdown)</b><small>Who evaluates → What they do → How they do it → Problems faced → Solutions</small></button>
   <button class="btn" data-map="family"><b>3. Scholarly Network (Detailed)</b><small>Question → Finding → Methodology → How You Use It</small></button>
   <button class="btn" data-map="qa"><b>4. Committee Defense Q&A (12 Questions)</b><small>Model Answer (Core + Logic) → Backing Literature</small></button>
@@ -37,6 +38,38 @@
 <script src="markmap-lib.min.js"></script>
 <script>
 const MAPS = {
+
+story: `# START HERE — The Whole Thing as a Story (2 minutes)
+*No jargon. Read top to bottom. The other maps hold the details — this one is the story.*
+
+## THE ONE-SENTENCE VERSION
+- **Legitimacy = "does this look like a real, trustworthy business to outsiders?"** — the outsiders (banks, clients, the public) decide. Not the founder.
+
+## THE PROBLEM YOUR THESIS SOLVES
+- New and unconventional founders (women, immigrants, career-switchers) don't LOOK like "real" entrepreneurs to judges
+- Nobody trusts them → no loans, no clients, no support
+- Training programs teach business SKILLS — but nobody ever tested whether training changes what judges think
+- **Your thesis = the first test: can a 12-hour training make outsiders see a founder as legitimate?**
+
+## WHO STUDIED WHAT (one sentence each)
+- **SIRAZ studied the JUDGES.** She showed people fake startup profiles and measured what makes them say "this is a real business." → Answer: looking like a normal, recognizable business beats everything else.
+- **ALDEBERT studied the HELPERS.** She watched an accelerator for 2 years — can it lend its reputation to startups? → Answer: yes, but only after the accelerator itself is trusted.
+- **SCHOON built the RULER.** Legitimacy is never inside a person — it's the RELATIONSHIP between venture and judge: the judge's expectations + the venture's signals + the judge's approval.
+- **GHODS proved it pays.** Startups going abroad only succeed if they're seen as legitimate first — legitimacy converts into real performance.
+- **BERTRAND studied the FOUNDER'S feelings.** A founder who feels like a fraud (impostor) stops acting — internal legitimacy matters too.
+- **THE CLASSICS (Suchman, Zimmerman & Zeitz, Fisher)** built the vocabulary: legitimacy is a resource that unlocks money, clients, and survival.
+
+## YOUR THESIS IN ONE PICTURE
+- Judges hold a yardstick (Schoon's "expectations")
+- Your 12h module teaches founders to send the right signals (Schoon's "conformity" = your 5 capabilities: Cognitive · Pragmatic · Social · Factual · Regulative)
+- Siraz proved judges respond to exactly these signals ("assent")
+- **Nobody connected the two: nobody trained the founder and measured the judge**
+- **You run the experiment: randomize founders → train half → measure whether judges rate them higher**
+
+## WHY IT MATTERS (the elevator pitch)
+- If training works → a cheap 12-hour fix for the legitimacy gap faced by unconventional founders
+- If it doesn't → proves legitimacy lives outside the founder's reach → policy should target judges/platforms, not founders
+- Either way you learn something the field doesn't know`,
 
 punchlines: `# LEGITIMACY FIELD — 20-Second Map
 *Level 1 = which SIDE of the relationship. Level 2 = paper + verdict tag. Click "Details" → problem attacked · method · each caveat as its own node (what it is → how big → fix).*
@@ -716,7 +749,7 @@ document.querySelectorAll('.btn').forEach(b => {
   });
 });
 
-render('punchlines');
+render('story');
 </script>
 </body>
 </html>

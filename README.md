@@ -78,45 +78,45 @@ Key insight: a venture's state can flip purely because the *societal yardstick* 
 
 *From OpenAlex (Sep 2026): the most-cited recent papers citing the field's canon (Suchman · Fisher · Bitektine & Haack · Siraz 2023). One line each = what they found. [cit.] = citation count.*
 
-**Theory core**
-- Vaara, Aranda & Etchanchu (2024, J. of Management) · 68 — discursive legitimation unified into 5 elements: strategies, positions, foundations, temporality, arenas
-- Shu et al. (2024, Mgmt & Org Review) · 35 — green innovation earns emerging-market firms legitimacy abroad → export performance
-- Meyer & Tse (2025, Int. Business Review) · 30 — legitimacy is multi-faceted; must be studied as an ongoing process of creation/maintenance/loss
-- Rintamäki, Parker & Spicer (2024, AMR) · 22 — "institutional parasites": illegitimate actors can trigger drift, layering or reform via elite reactions
+*Grouped by level on Schoon's dyad: **the judge** (evaluator side) → **the connection** (signals crossing the founder↔evaluator boundary) → **the object** (venture side) → **the field** (programs, categories, norms). Most of the field's newest work sits in *the connection* — exactly where this thesis lives.*
+
+**L1 · The judge — evaluator side (how the verdict forms)**
 - Haack, Sieweke & Pfarrer (2025, JMS) · 14 — collective validity can mask low evaluator consensus — a third construct beside propriety/validity
 - Alsheimer et al. (2024, RSER) · 14 — "acceptance" and "legitimacy" are complementary but distinct constructs
-
-**New-venture legitimation**
-- Chen, Yang & Wei (2024, JMS) · 27 — ventures defend inside ecosystems by allying with the investor's core competitors
-- Li, Cai & Bosma (2024, SBE) · 21 — social entrepreneurship borrows cognitive legitimacy from two parent categories (business + nonprofit)
-- Kansheba et al. (2024, IJEBR) · 15 — local legitimacy spreads beyond the home ecosystem via brokerage and network activity
-- Neuberger et al. (2024, AMJ) · 7 — accelerator ethnography: three legitimation pathways when an intermediary is a make-or-break audience
-- Rhee, Lo & Durand (2025, Org Science) · 7 — plant-based meat legitimated itself by reconfiguring the category basis + experiential congruence
-- Villers et al. (2024, J. Service Research) · 7 — eWOM gradually legitimates innovations in stigmatized markets
-- Ramos da Silva et al. (2024, Int. Marketing Review) · 9 — rebranding legitimates differently in emerging vs developed countries
+- Kenney et al. (2024, SBE) · 14 — IPO-team gender diversity shifted with societal norms and investor beliefs
 - Tsoukas et al. (2024, AM Annals) · 12 — judgment research consolidates into variance / prediction / wisdom; judgment is evaluative and personal
+- König et al. (2024, AMR) · 12 — CEO humor moves evaluators' social evaluations via humor type × schema congruence
 
-**Signals, hype & rhetoric**
+**L2 · The connection — signals crossing the founder↔evaluator boundary**
 - Rady et al. (2025, JBV) · 20 — hype mobilizes resources only while the venture keeps pace with the expectations it inflates
 - Wood et al. (2024, JBV) · 19 — founders manage hyped expectations over time; update techniques dampen backer negativity during delays
 - Loos & Spraul (2024, JMS) · 19 — legitimation is also inward: CSR managers face 6 challenges, deploy 8 legitimation strategies
 - Spivack et al. (2025, JBV) · 17 — hype inflates legitimacy short-term, accelerates legitimacy loss later via moral questioning
+- Kansheba et al. (2024, IJEBR) · 15 — local legitimacy spreads beyond the home ecosystem via brokerage and network activity
 - McKenny et al. (2024, ETP) · 14 — proactive, other-focused crisis communication improved crowdfunding outcomes
-- König et al. (2024, AMR) · 12 — CEO humor moves evaluators' social evaluations via humor type × schema congruence
+- Ramos da Silva et al. (2024, Int. Marketing Review) · 9 — rebranding legitimates differently in emerging vs developed countries
+- Neuberger et al. (2024, AMJ) · 7 — accelerator ethnography: three legitimation pathways when an intermediary is a make-or-break audience
 - Clarke et al. (2024, JBE) · 7 — managers used 7 discursive legitimation strategies for secrecy, shifting mix as change unfolded
+- Villers et al. (2024, J. Service Research) · 7 — eWOM gradually legitimates innovations in stigmatized markets
 
-**Programs & training**
+**L3 · The object — venture side (what gets judged)**
+- Shu et al. (2024, Mgmt & Org Review) · 35 — green innovation earns emerging-market firms legitimacy abroad → export performance
+- Chen, Yang & Wei (2024, JMS) · 27 — ventures defend inside ecosystems by allying with the investor's core competitors
 - Williams, Li & Zhao (2024, JMS) · 23 — integrates entrepreneurial resourcefulness: when/why/how it drives the venture process
+- Li, Cai & Bosma (2024, SBE) · 21 — social entrepreneurship borrows cognitive legitimacy from two parent categories (business + nonprofit)
+- Rhee, Lo & Durand (2025, Org Science) · 7 — plant-based meat legitimated itself by reconfiguring the category basis + experiential congruence
+
+**L4 · The field — macro environment (programs, categories, norms)**
+- Vaara, Aranda & Etchanchu (2024, J. of Management) · 68 — discursive legitimation unified into 5 elements: strategies, positions, foundations, temporality, arenas
+- Meyer & Tse (2025, Int. Business Review) · 30 — legitimacy is multi-faceted; must be studied as an ongoing process of creation/maintenance/loss
+- Rintamäki, Parker & Spicer (2024, AMR) · 22 — "institutional parasites": illegitimate actors can trigger drift, layering or reform via elite reactions
 - Rechter & Avnimelech (2024, SBE) · 21 — intensive personal mentoring is accelerators' "secret sauce"
 - Nafari et al. (2024, Technovation) · 18 — a university virtual incubator fosters social intrapreneurship via non-pecuniary contributions
-- Avnimelech et al. (2024, SMJ) · 12 — decomposes accelerator effects: institution (brewery) vs cohort vintage (winery), n=1,350
-- Qin (2025, JIBS) · 3 — accelerator impact varies by how much support the ecosystem already provides
-
-**Bias & marginalization**
 - Santos et al. (2024, SBE) · 17 — racial identity is central to Black founders' lived entrepreneurial experience
-- Kenney et al. (2024, SBE) · 14 — IPO-team gender diversity shifted with societal norms and investor beliefs
 - Lewis, Bruton & Shepherd (2024, AMR) · 12 — opportunity underexploitation means entrepreneurship reproduces inequality
+- Avnimelech et al. (2024, SMJ) · 12 — decomposes accelerator effects: institution (brewery) vs cohort vintage (winery), n=1,350
 - Spanuth & Urbano (2024, AM Perspectives) · 8 — a social enterprise legitimated marginalized workers via reconditioning, reframing, representing
+- Qin (2025, JIBS) · 3 — accelerator impact varies by how much support the ecosystem already provides
 
 ## The committee's hardest questions — short answers
 

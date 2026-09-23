@@ -797,47 +797,46 @@
 - **Martin, McNally & Kay (2013, JBV) + Bae et al. (2014, ETP):** meta-analyses — entrepreneurship education → entrepreneurial intentions/actions, r ≈ .14–.16, small but consistent → education changes founder behavior at the population level
 
 ### FRESH AMMUNITION — the 30 most-cited legitimacy papers (2024–26)
-*Pulled from OpenAlex (Sep 2026): the most-cited recent papers in the legitimacy conversation — all cite the field's canon (Suchman · Fisher · Bitektine & Haack · Siraz 2023 …). One line each = what they found. [cit.] = OpenAlex citation count.*
+*Pulled from OpenAlex (Sep 2026): the most-cited recent papers citing the field's canon (Suchman · Fisher · Bitektine & Haack · Siraz 2023 …). One line each = what they found. [cit.] = OpenAlex citation count.*
+*Grouped by LEVEL on Schoon's dyad: THE JUDGE (evaluator side — expectations & assent) → THE CONNECTION (signals crossing the founder↔evaluator boundary) → THE OBJECT (venture side — conformity) → THE FIELD (macro environment: programs, categories, norms). The pattern: most of the field's newest work sits in THE CONNECTION — exactly where this thesis lives.*
 
-#### A. THE THEORY CORE — how legitimacy works
-- **Vaara, Aranda & Etchanchu (2024, J. of Management) · 68 cit.** — synthesizes discursive legitimation into one framework of five elements: strategies, positions, foundations, temporality, arenas
-- **Shu, Zhao, Yao & Zhou (2024, Mgmt & Org Review) · 35 cit.** — green innovation earns emerging-market firms regulatory + social legitimacy abroad, converting into export performance
-- **Meyer & Tse (2025, Int. Business Review) · 30 cit.** — legitimacy in emerging economies is multi-faceted and must be theorized as an ongoing process of creation, maintenance and loss — not isolated events
-- **Rintamäki, Parker & Spicer (2024, AMR) · 22 cit.** — "institutional parasites": illegitimate actors can trigger institutional drift, layering or reform depending on elite functionaries' reactions
+#### L1. THE JUDGE — evaluator side (how the verdict forms)
 - **Haack, Sieweke & Pfarrer (2025, JMS) · 14 cit.** — collective validity can mask low evaluator consensus — consensus is a distinct third construct beside propriety and validity
 - **Alsheimer, Schnell, Chlebna & Rohe (2024, RSER) · 14 cit.** — "acceptance" (societal support for a technology) and "legitimacy" (alignment with the institutional environment) are complementary but distinct constructs
-
-#### B. NEW-VENTURE LEGITIMATION — the founder's side
-- **Chen, Yang & Wei (2024, JMS) · 27 cit.** — new ventures inside innovation ecosystems defend themselves by allying with the ecosystem investor's core competitors
-- **Li, Cai & Bosma (2024, Small Bus. Economics) · 21 cit.** — social entrepreneurship gains cognitive legitimacy via spillovers from its two parent categories: new business and nonprofit
-- **Kansheba, Fubah & Wald (2024, IJEBR) · 15 cit.** — a venture's local legitimacy diffuses beyond its home ecosystem when brokerage and network activities carry it
-- **Neuberger, Mattioli, Richards & Nyilasy (2024, AMJ) · 7 cit.** — ethnography inside an accelerator: founders follow three distinct legitimation pathways when an intermediary becomes a make-or-break audience
-- **Rhee, Lo & Durand (2025, Organization Science) · 7 cit.** — plant-based meat legitimated a category that challenges an established one by reconfiguring the category basis and manufacturing experiential congruence
-- **Villers, Dhalla & Oberholzer (2024, J. of Service Research) · 7 cit.** — electronic word-of-mouth gradually legitimates innovations in stigmatized markets
-- **Ramos da Silva, Andersson & Aagerup (2024, Int. Marketing Review) · 9 cit.** — post-acquisition rebranding legitimates differently in emerging vs developed countries — internal and external audiences need different work
+- **Kenney, Patton & Terjesen (2024, Small Bus. Economics) · 14 cit.** — IPO-team gender diversity shifted as societal norms and institutional investors' beliefs about "good management" changed
 - **Tsoukas, Hadjimichael, Nair & Pyrko (2024, AM Annals) · 12 cit.** — consolidates judgment research into three perspectives (variance, prediction, wisdom) — judgment is inherently evaluative and personal
+- **König, Stöcklein, Hiller & Cooper (2024, AMR) · 12 cit.** — CEO humor moves infomediaries' social evaluations depending on humor type and its congruence with the evaluator's CEO-schema
 
-#### C. SIGNALS, HYPE & RHETORIC — what founders say and how it lands
+#### L2. THE CONNECTION — signals crossing the founder↔evaluator boundary
 - **Rady, Townsend, Hunt & Simpson (2025, JBV) · 20 cit.** — hype mobilizes resources only conditionally — its value lasts while the venture keeps pace with the expectations it inflates (AI startups)
 - **Wood, Dwyer & Scheaf (2024, JBV) · 19 cit.** — entrepreneurs actively manage hyped expectations over time, using update techniques that dampen backer negativity through delays
 - **Loos & Spraul (2024, JMS) · 19 cit.** — legitimation is also inward-facing: CSR managers face six internal legitimation challenges and deploy eight distinct strategies to overcome them
 - **Spivack, Lahti, Burström & Wincent (2025, JBV) · 17 cit.** — hype inflates perceived legitimacy short-term but accelerates legitimacy loss later through moral questioning of decoupled practices
+- **Kansheba, Fubah & Wald (2024, IJEBR) · 15 cit.** — a venture's local legitimacy diffuses beyond its home ecosystem when brokerage and network activities carry it
 - **McKenny, Fisher, Short & Ketchen (2024, ETP) · 14 cit.** — proactive, other-focused crisis communication improved crowdfunding outcomes during COVID — how founders talk to backers moves money
-- **König, Stöcklein, Hiller & Cooper (2024, AMR) · 12 cit.** — CEO humor moves infomediaries' social evaluations depending on humor type and its congruence with the evaluator's CEO-schema
+- **Ramos da Silva, Andersson & Aagerup (2024, Int. Marketing Review) · 9 cit.** — post-acquisition rebranding legitimates differently in emerging vs developed countries — internal and external audiences need different work
+- **Neuberger, Mattioli, Richards & Nyilasy (2024, AMJ) · 7 cit.** — ethnography inside an accelerator: founders follow three distinct legitimation pathways when an intermediary becomes a make-or-break audience
 - **Clarke, Higgs & Garavan (2024, J. Business Ethics) · 7 cit.** — senior managers used seven discursive legitimation strategies to justify organizational secrecy, shifting the mix as change unfolded
+- **Villers, Dhalla & Oberholzer (2024, J. of Service Research) · 7 cit.** — electronic word-of-mouth gradually legitimates innovations in stigmatized markets
 
-#### D. PROGRAMS & TRAINING — the ATENA stream
+#### L3. THE OBJECT — venture side (what gets judged)
+- **Shu, Zhao, Yao & Zhou (2024, Mgmt & Org Review) · 35 cit.** — green innovation earns emerging-market firms regulatory + social legitimacy abroad, converting into export performance
+- **Chen, Yang & Wei (2024, JMS) · 27 cit.** — new ventures inside innovation ecosystems defend themselves by allying with the ecosystem investor's core competitors
 - **Williams, Li & Zhao (2024, JMS) · 23 cit.** — integrates fragmented work on entrepreneurial resourcefulness into one foundation — when, why and how it drives the venture process
+- **Li, Cai & Bosma (2024, Small Bus. Economics) · 21 cit.** — social entrepreneurship gains cognitive legitimacy via spillovers from its two parent categories: new business and nonprofit
+- **Rhee, Lo & Durand (2025, Organization Science) · 7 cit.** — plant-based meat legitimated a category that challenges an established one by reconfiguring the category basis and manufacturing experiential congruence
+
+#### L4. THE FIELD — macro environment (programs, categories, norms around the dyad)
+- **Vaara, Aranda & Etchanchu (2024, J. of Management) · 68 cit.** — synthesizes discursive legitimation into one framework of five elements: strategies, positions, foundations, temporality, arenas
+- **Meyer & Tse (2025, Int. Business Review) · 30 cit.** — legitimacy in emerging economies is multi-faceted and must be theorized as an ongoing process of creation, maintenance and loss — not isolated events
+- **Rintamäki, Parker & Spicer (2024, AMR) · 22 cit.** — "institutional parasites": illegitimate actors can trigger institutional drift, layering or reform depending on elite functionaries' reactions
 - **Rechter & Avnimelech (2024, Small Bus. Economics) · 21 cit.** — intensive personal mentoring is the "secret sauce" — the active ingredient behind accelerator effects on startups
 - **Nafari, Honig & Siqueira (2024, Technovation) · 18 cit.** — a university-run virtual incubator can foster social intrapreneurship through non-pecuniary contributions beyond money
-- **Avnimelech, Dushnitsky, Ellsaesser & Fitza (2024, SMJ) · 12 cit.** — Bayesian decomposition of 1,350 startups separates how much of venture quality is the accelerator institution (brewery) vs the cohort vintage (winery)
-- **Qin (2025, J. Int. Business Studies) · 3 cit.** — accelerator impact varies across ecosystems — the boost depends on how much support the surrounding ecosystem already provides (oasis in the desert vs icing on the cake)
-
-#### E. BIAS & MARGINALIZATION — who gets judged harder
 - **Santos, Liguori, Morris & Gibbs (2024, Small Bus. Economics) · 17 cit.** — racial identity is central, not peripheral, to the lived entrepreneurial experience of African American and Black founders
-- **Kenney, Patton & Terjesen (2024, Small Bus. Economics) · 14 cit.** — IPO-team gender diversity shifted as societal norms and institutional investors' beliefs about "good management" changed
 - **Lewis, Bruton & Shepherd (2024, AMR) · 12 cit.** — entrepreneurship's promise is unfulfilled for disadvantaged groups — opportunity underexploitation reproduces inequality
+- **Avnimelech, Dushnitsky, Ellsaesser & Fitza (2024, SMJ) · 12 cit.** — Bayesian decomposition of 1,350 startups separates how much of venture quality is the accelerator institution (brewery) vs the cohort vintage (winery)
 - **Spanuth & Urbano (2024, AM Perspectives) · 8 cit.** — a social enterprise legitimated marginalized waste workers through 3R strategies: reconditioning, reframing, representing
+- **Qin (2025, J. Int. Business Studies) · 3 cit.** — accelerator impact varies across ecosystems — the boost depends on how much support the surrounding ecosystem already provides (oasis in the desert vs icing on the cake)
 
 ### 12 TOUGH QUESTIONS — with my answers
 *Structured for rapid 30-second mastery: Model Answer (Core Claim + Two-Link Logic) → Backing Literature*

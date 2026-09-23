@@ -551,26 +551,57 @@ story: `# THE WHOLE THING — Story + Evidence in One Map
   - **Problem: small sample / power**
     - What it means: too few founders → random noise can hide a real effect → "no effect" even if training works
     - How big: HIGH — the #1 attack on field experiments
-    - Fix 1 — pre-registered power analysis: BEFORE collecting data, calculate how many founders you need → "too small?" becomes a number you defend upfront
-    - Fix 2 — ITT: analyze everyone randomly ASSIGNED, even skippers → groups stay comparable
-    - Fix 3 — effect size + CI: show HOW BIG the effect is, not just "significant/not"
+    - Fix 1 — power analysis
+      - What it is: a calculation you do BEFORE the study that answers "how many founders do I need?"
+      - How it works: you guess the effect size you expect (e.g., medium) → plug in how sure you want to be (usually 80%) → the formula returns the minimum n → you only start once you have it
+      - What it solves: turns "your sample is too small" from a debate into a number you already defended upfront
+    - Fix 2 — ITT (intention-to-treat)
+      - What it is: a rule for who counts in your results
+      - How it works: everyone who was randomly assigned stays in their group for analysis — even the founders who skipped the training. You compare "everyone offered training" vs "everyone not offered"
+      - Why it works: if you only counted attendees, motivated people would pile up on one side → the comparison breaks. Keeping everyone in their original group preserves the fair coin flip
+      - What it solves: dropouts and skippers can't silently break your randomization
+    - Fix 3 — effect size + confidence interval
+      - What it is: instead of just "yes/no significant", you report how BIG the change is and the range of plausible values
+      - How it works: effect size = the gap between groups in plain units (e.g., +0.4 on a 7-point scale); the CI = the honest band around it ("the true effect is probably between X and Y")
+      - What it solves: with a small sample you can still show a meaningful effect and be honest about uncertainty — instead of a bare "p > .05, nothing found"
   - **Problem: attrition (founders drop out)**
-    - What it means: if quitters differ from stayers, groups stop being comparable → silent bias
+    - What it means: some founders leave between T0→T1→T4 → if quitters differ from stayers, the groups stop being comparable → silent bias
     - How big: HIGH — most common field-RCT killer
-    - Fix 1 — leaver/stayer comparison: compare dropouts' T0 answers to stayers' → same = attrition is random and harmless
-    - Fix 2 — multiple imputation: estimate missing answers from what you know about that founder
-    - What remains: imputation assumes missingness is explainable by observed data
+    - Fix 1 — leaver/stayer comparison
+      - What it is: a check you run, not a fix that prevents dropout
+      - How it works: take the T0 baseline answers of everyone who later quit → compare them to the stayers → if they look the same (age, confidence, venture stage), dropout was random noise, not systematic
+      - What it solves: turns "your dropouts ruined it" into "I showed the leavers looked identical to stayers"
+    - Fix 2 — multiple imputation
+      - What it is: a way to handle the empty cells instead of deleting those founders
+      - How it works: for a founder who quit at T4, the model uses everything known about them (T0 answers, group, progress) to generate several plausible T4 answers → runs the analysis on each → combines results
+      - What it solves: keeps everyone in the analysis AND keeps honest uncertainty — better than either deleting people or pretending nothing is missing
+    - What remains: imputation assumes missingness is explainable by what you already observed — you state this assumption openly
   - **Problem: contamination (control learns the content)**
-    - What it means: treated founders share module content with control peers → gap shrinks artificially
+    - What it means: treated founders share module content with control peers → the control group gets secretly treated → gap shrinks artificially
     - How big: MEDIUM-HIGH — same program = they talk
-    - Fix 1 — cohort separation: different time slots → they never meet, no leak channel
-    - Fix 2 — staggered rollout: control gets the module AFTER T4 → clean pre-treatment answers
-    - Fix 3 — measure the leak: ask control "did you hear about the module?" → quantify, don't guess
+    - Fix 1 — cohort separation
+      - What it is: keep the two groups physically apart
+      - How it works: treatment and control run in different time slots / cohorts → they never meet → no channel for the content to leak
+      - What it solves: removes the leak path entirely rather than hoping nobody talks
+    - Fix 2 — staggered rollout
+      - What it is: control isn't "no training" — it's "training LATER"
+      - How it works: control founders get the module AFTER T4 → their T0–T4 answers are still clean → and you keep everyone happy (nobody is denied training forever)
+      - What it solves: gives a clean untreated comparison period without creating angry "never-treated" founders
+    - Fix 3 — measure the leak directly
+      - What it is: ask, don't guess
+      - How it works: at T1/T4 ask control founders "did you hear about the module content? what did you hear?" → you quantify how much spillover happened instead of assuming zero
+      - What it solves: if some leak happened anyway, you can report its size instead of hiding it
   - **Problem: self-report only**
-    - What it means: asking "do you feel legitimate?" measures confidence, not judges' views
+    - What it means: asking "do you feel legitimate?" measures confidence inside the head — not what judges outside actually think
     - How big: MEDIUM
-    - Fix 1 — objective milestones: registrations, applications, revenue
-    - Fix 2 — pitch-deck text scores: Ghods BJM 2026 algorithm = external reproducible score
+    - Fix 1 — objective milestones
+      - What it is: count real-world behavior, not just feelings
+      - How it works: track things founders actually DO — registering the business, submitting funding applications, getting first revenue — these are hard to fake on a survey
+      - What it solves: proves the training changed behavior, not just self-image
+    - Fix 2 — pitch-deck text scores
+      - What it is: an external algorithm scores the legitimacy of their actual pitch texts
+      - How it works: founders submit real pitch decks → Ghods BJM 2026 algorithm scores them on the legitimacy dimensions → reproducible score, no self-report involved
+      - What it solves: an outside-the-head legitimacy measure → kills the "it's all just self-report" critique
 - **4. How You Apply It:** Article 1 — the causal test the literature has never run.
 
 #### A2. SEMI-STRUCTURED INTERVIEWS — Article 2 (Your Mechanism Tracer)
@@ -578,24 +609,42 @@ story: `# THE WHOLE THING — Story + Evidence in One Map
 - **2. How:** Guide built on the 5 capabilities → record → transcribe → Gioia coding. Anchor: Aldebert ran 34 interviews / 24 months in this ecosystem.
 - **3. Problems & Fixes:**
   - **Problem: coding subjectivity**
-    - What it means: YOU turn quotes into themes — committee could say you read your own theory into it
-    - How big: HIGH — default attack on qualitative work
-    - Fix 1 — Gioia data structure: table showing raw quote → 1st-order code → 2nd-order theme → aggregate dimension → every claim traceable to a quote
-    - Fix 2 — dual coders + kappa: second researcher codes same transcripts; kappa = agreement score (> .80 strong)
-    - What remains: kappa shows agreement, not truth — keep raw quotes visible
+    - What it means: YOU turn quotes into themes — committee could say you read your own theory into the answers
+    - How big: HIGH — the default attack on all qualitative work
+    - Fix 1 — Gioia data structure
+      - What it is: a table that shows the full chain from quote to conclusion
+      - How it works: raw founder quote → 1st-order code (their words) → 2nd-order theme (your grouping) → aggregate dimension (the big claim). Every claim in your paper can be traced back down the chain to an actual quote
+      - What it solves: "you just made this up" → "here is the quote, the code, the theme — audit it"
+    - Fix 2 — dual coders + kappa
+      - What it is: a second researcher independently codes the same transcripts
+      - How it works: they code without seeing your labels → you compare → kappa = the agreement score (> .80 = strong agreement)
+      - What it solves: if two people independently see the same themes, it's not just your opinion
+    - What remains: kappa shows AGREEMENT, not truth — two biased coders could still agree → keep raw quotes visible so readers judge for themselves
   - **Problem: recall bias**
-    - What it means: months later, founders tell a cleaned-up version — memory edits reality
+    - What it means: months later, founders retell a cleaned-up version — memory edits reality
     - How big: MEDIUM
-    - Fix 1 — concrete episodes: "walk me through your last pitch" produces details, not storytelling
-    - Fix 2 — triangulation: compare what they SAY vs survey scores and milestones
+    - Fix 1 — concrete episodes
+      - What it is: ask about a specific event, not an opinion
+      - How it works: "walk me through your last pitch — what did you say, what did they ask?" forces real details instead of a polished story
+      - What it solves: details are hard to invent; vague feelings are easy
+    - Fix 2 — triangulation
+      - What it is: check interview claims against your other two data sources
+      - How it works: if a founder says "I now know how to present myself" → check whether their survey self-legitimacy score actually rose and whether they hit real milestones
+      - What it solves: a claim that survives 3 different data types is much harder to dismiss
   - **Problem: social desirability**
-    - What it means: founders tell you training "worked" to please you
+    - What it means: founders tell you training "worked" because they want to please you / the program
     - How big: MEDIUM
     - Fix — anonymized transcripts + neutral framing + interview LOW responders too
+      - What it is: remove the reason to lie
+      - How it works: names stripped before analysis + ask neutral questions ("what changed, if anything?") + deliberately interview founders the training DIDN'T help → they have no incentive to praise it
+      - What it solves: low responders saying "it didn't help me" proves people aren't just flattering you
   - **Problem: small n**
-    - What it means: 20–30 interviews can't estimate prevalence
-    - How big: LOW — not the goal
-    - Fix — purposive sampling: comparing high vs low responders IS the design (mechanism, not counting)
+    - What it means: 20–30 interviews can't estimate how common something is in the population
+    - How big: LOW — because it's not the goal
+    - Fix — purposive (extreme-case) sampling
+      - What it is: you choose interviewees on purpose — high responders AND low responders
+      - How it works: comparing "it worked for me" founders against "nothing changed" founders reveals the MECHANISM — what the training does differently inside different people
+      - What it solves: interviews answer WHY, not HOW MANY — and comparing extremes is the design, not a weakness
 - **4. How You Apply It:** Article 2 — explains HOW/WHY the treatment works inside the founder.
 
 #### A3. LONGITUDINAL MULTI-WAVE SURVEY — T0 → T1 → T4 (Your Measurement Spine)
@@ -603,19 +652,36 @@ story: `# THE WHOLE THING — Story + Evidence in One Map
 - **2. How:** Same validated scales every wave; treatment × time interaction = the effect.
 - **3. Problems & Fixes:**
   - **Problem: CMV (common-method variance)**
-    - What it means: predictor + outcome from the same questionnaire → correlation inflated by HOW you asked, not reality
+    - What it means: you measure cause AND effect on the same questionnaire in the same sitting → the two correlate because of HOW you asked (same scale, same mood, same person), not because of reality
+    - Everyday version: ask someone "do you feel confident?" then "do you feel legitimate?" in one breath — a cheerful person says yes to both → fake correlation
     - How big: MEDIUM
-    - Fix 1 — temporal separation: different items at different times → one sitting can't fake the link
-    - Fix 2 — different question formats: mix scales/wording so answering-style can't drive correlation
-    - Fix 3 — objective markers: milestones + text scores anchor answers outside the questionnaire
+    - Fix 1 — temporal separation
+      - What it is: measure different things at different times
+      - How it works: self-legitimacy at T1, outcomes at T4 → the same sitting can't fake a link measured weeks apart
+      - What it solves: the correlation can't be just a moment's mood
+    - Fix 2 — different question formats
+      - What it is: mix up scales and wording so "answering style" can't drive the result
+      - How it works: if every question uses the same 1–7 agree/disagree format, people slip into a pattern → varying it breaks the pattern
+      - What it solves: correlation reflects real difference, not a habit of clicking "4"
+    - Fix 3 — objective markers
+      - What it is: anchor answers to things outside the questionnaire
+      - How it works: compare survey answers against real milestones + the pitch-deck text score → a self-report backed by observable behavior can't be pure answering-style
+      - What it solves: gives the survey an outside reality check
   - **Problem: panel conditioning**
-    - What it means: seeing the survey repeatedly makes founders MORE aware — measurement becomes a mini-treatment
+    - What it means: filling in the same survey repeatedly makes founders MORE aware of legitimacy — the measurement itself becomes a mini-treatment
+    - Everyday version: weigh yourself daily → you start dieting → the scale changed the behavior it was only supposed to measure
     - How big: MEDIUM
-    - Fix — control group fills the same survey at the same waves → conditioning hits both arms equally → cancels out
+    - Fix — control group fills the same survey
+      - What it is: the comparison group also answers at T0, T1, T4
+      - How it works: if the survey itself teaches awareness, it teaches BOTH groups equally → when you compare groups, the survey effect is identical on both sides → it cancels out
+      - What it solves: whatever the survey does to people, it does to everyone → the training difference stays clean
   - **Problem: maturation**
-    - What it means: founders improve naturally over time — change isn't necessarily training
-    - How big: HIGH without control, near-zero with it
-    - Fix — randomized control: both groups mature together; treated group's EXTRA change = the training effect
+    - What it means: founders improve naturally over time — business skills grow with experience → any change isn't necessarily caused by training
+    - How big: HIGH without a control group, near-zero with it
+    - Fix — randomized control group
+      - What it is: a group that goes through the same months WITHOUT the module
+      - How it works: both groups mature at the same natural rate → control group's improvement = "what time alone does" → treated group's EXTRA improvement beyond that = the training effect
+      - What it solves: "they just got better with time" → "the treated group improved MORE than time alone explains
 - **4. How You Apply It:** The measurement backbone of Article 1.
 
 ### PART B — METHODS FROM THE LITERATURE (What Others Use)

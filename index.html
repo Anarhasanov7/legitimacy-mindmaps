@@ -21,7 +21,7 @@
   <h1>Legitimacy Mind Maps</h1>
   <p>Select a map view below. Click nodes to expand or collapse. Scroll to zoom.</p>
   <button class="btn active" data-map="punchlines"><b>1. Field Map (Verdict First)</b><small>Core takeaway → 1. Verdict (YES/NO/THEORY) → 2. Sample & Context → 3. Methodology & Robustness → 4. For You</small></button>
-  <button class="btn" data-map="methods"><b>2. Method Toolbox (Verdict First)</b><small>1. Popularity & Rigor → 2. Robustness & Limits → 3. Who Used It → 4. For You</small></button>
+  <button class="btn" data-map="methods"><b>2. Method Toolbox (Deep Breakdown)</b><small>Who evaluates → What they do → How they do it → Problems faced → Solutions</small></button>
   <button class="btn" data-map="family"><b>3. Scholarly Network (Detailed)</b><small>Question → Finding → Methodology → How You Use It</small></button>
   <button class="btn" data-map="qa"><b>4. Committee Defense Q&A (12 Questions)</b><small>Model Answer (Core + Logic) → Backing Literature</small></button>
   <button class="btn" data-map="cards"><b>5. Detailed Research Cards</b><small>7-line structured breakdown per paper</small></button>
@@ -137,44 +137,50 @@ punchlines: `# LEGITIMACY FIELD — Systematic Summary (Verdict First)
 - **3. The Measurement Side:** Schoon & Ghods proved how to operationalize the relational dyad
 - **4. YOUR ATENA THESIS:** You execute the missing **Field RCT** — testing whether training the founder actually shifts the external legitimacy judgment conferred by the evaluator`,
 
-methods: `# METHOD TOOLBOX — Systematic Methodological Breakdown (Verdict First)
-*Uniform 4-line structure: 1. Popularity & Epistemic Rigor → 2. Data Collection & Robustness → 3. Key Studies in Literature → 4. How You Apply It*
+methods: `# METHOD TOOLBOX — Systematic Operational Breakdown
+*Standardized 5-line structure: 1. Who Evaluates & What They Do → 2. How They Do It (Data Collection & Analysis) → 3. Key Methodological Problems Faced → 4. How They Solve These Problems → 5. Application in Your Thesis*
 
-## 1. CONJOINT / FACTORIAL EXPERIMENT (The Evaluator Standard)
-- **1. Popularity & Rigor:** ✅ GOLD STANDARD for Evaluator Cognition — Highly popular, standard causal method in top management journals (JMS, JBE, EMR)
-- **2. Data Collection & Robustness:** Evaluators rate randomized orthogonal profile bundles (e.g., 32 profiles per judge); analyzed via multilevel mixed-effects regressions; eliminates omitted variable bias via randomization; limited only by hypothetical vignette setting
-- **3. Studies in Literature:** Siraz JMS Microlevel (1,866 evals), Siraz EMR Fracking (3,952 evals), Siraz EMR Foie Gras (992 evals), Siraz AOM Failure (2,368 evals), Siraz JBE Latinx (12,496 evals)
-- **4. How You Apply It:** The designed Article 4 extension — presenting randomized atEnA founder pitch profiles to real bank officers and grant committees
+## 1. CONJOINT / FACTORIAL EXPERIMENT (The Evaluator Cognition Standard)
+- **1. Who Evaluates & What They Do:** Human judges (bankers, consumers, investors, or general citizens; e.g. Siraz's 31 to 781 evaluators) act as the evaluators. They read hypothetical venture descriptions and assign legitimacy or funding scores.
+- **2. How They Do It:** Software generates randomized profiles mixing different cues (e.g., male vs female founder, certified vs non-certified). Each judge rates 16 to 32 profiles. Multilevel regression models the data because multiple ratings (Level 1) are nested inside individual judges (Level 2).
+- **3. Problems They Face:** (a) Rating fatigue (evaluators getting tired after rating 30 profiles); (b) Non-independence of observations (one judge gives consistently high or low ratings across all profiles); (c) Hypothetical bias (judging on paper is not real investing).
+- **4. How They Solve These Problems:** (a) Orthogonal fractional factorial designs keep profile counts manageable (16–32); (b) Random-effects hierarchical modeling clusters standard errors by judge; (c) High-realism vignettes mimic authentic pitch summaries.
+- **5. Application in Your Thesis:** The planned Article 4 extension — presenting randomized atEnA founder pitch profiles to real regional bank officers and grant committees.
 
 ## 2. RANDOMIZED CONTROLLED TRIAL / FIELD EXPERIMENT (Your Thesis Design)
-- **1. Popularity & Rigor:** ✅ HIGHEST CAUSAL RIGOR (Extremely Rare) — Gold standard for policy and intervention impact; only 1 RCT found across 5,492 reviewed legitimacy studies
-- **2. Data Collection & Robustness:** Random assignment of active entrepreneurs to Treatment (12h Module + Mentoring) vs Control group; longitudinal measurement at Baseline (T0), Post-treatment (T1), and Decay Follow-up (T4); robust against selection bias
-- **3. Studies in Literature:** Represents the central empirical contribution of the ATENA doctoral dissertation
-- **4. How You Apply It:** Article 1 core empirical engine — estimating Average Treatment Effects (ATE), mediation pathways, and subgroup heterogeneity
+- **1. Who Evaluates & What They Do:** Real nascent entrepreneurs are randomized into Treatment (12h Module + Mentoring) vs Control. Evaluators are the real-world stakeholders (clients, banks, suppliers) whose validation the founder seeks.
+- **2. How They Do It:** Cohorts are randomly assigned at Baseline (T0). The treatment group receives 12 hours of codified legitimacy training. Systematic psychometric surveys track outcomes at T0, immediately Post-treatment (T1), and Longitudinal Decay (T4).
+- **3. Problems They Face:** (a) Participant attrition / dropouts over time; (b) Treatment spillovers / contamination (control founders talking to treated founders); (c) Subjective reporting bias on survey items.
+- **4. How They Solve These Problems:** (a) Intention-to-Treat (ITT) econometric estimation; (b) Clean digital cohort separation and staggered rollout; (c) Triangulating self-legitimacy scales against objective behavioral milestones (business registration, revenue, bank loans).
+- **5. Application in Your Thesis:** Article 1 core empirical engine — establishing the causal effect of entrepreneurship education on self-legitimacy and perceived market standing.
 
 ## 3. COMPUTATIONAL TEXT ANALYSIS (Objective Dyadic Measurement)
-- **1. Popularity & Rigor:** ✅ CUTTING-EDGE NOVEL METHOD — Rapidly emerging standard for objective, non-reactive behavioral measurement at scale
-- **2. Data Collection & Robustness:** Natural language processing algorithms score venture communication texts paired with audience types; validated against expert human ratings and out-of-sample venture failure econometrics
-- **3. Studies in Literature:** Ghods, Ricard, Aldebert & Schoon (BJM 2026, in press)
-- **4. How You Apply It:** Behavioral validation check — scoring participants' written pitch decks to overcome common-method variance critiques
+- **1. Who Evaluates & What They Do:** NLP algorithms act as automated evaluators. They analyze written artifacts (venture websites, pitch decks, press releases) paired with specific target audiences (customers, regulators, investors).
+- **2. How They Do It:** Algorithms parse textual documents into multi-dimensional legitimacy dictionaries (pragmatic, moral, cognitive, regulatory words). Each firm receives an objective composite legitimacy score and per-dimension metrics.
+- **3. Problems They Face:** (a) Contextual nuance / sarcasm (algorithms misinterpreting complex language); (b) Single-audience bias; (c) Proving that textual scores reflect real-world survival.
+- **4. How They Solve These Problems:** (a) Multi-stage human expert validation calibrates dictionary weights; (b) Modeling dyadic interaction (scoring text relative to audience type); (c) Econometric validation proving scores predict out-of-sample venture failure.
+- **5. Application in Your Thesis:** Behavioral validation check — scoring participants' written pitch deck submissions to eliminate common-method variance (CMV) critiques.
 
-## 4. QUALITATIVE CASE STUDY (Mechanism Discovery)
-- **1. Popularity & Rigor:** ✅ STANDARD QUALITATIVE METHOD — Highly respected for exploratory theory-building and unpacking "how/why" process dynamics
-- **2. Data Collection & Robustness:** Multi-source fieldwork: semi-structured founder interviews, accelerator manager tracking, participant observation, and archival documents; analyzed via thematic coding and process tracing; high internal validity, limited generalizability
-- **3. Studies in Literature:** Aldebert AEI (accelerators), Aldebert E&I (deeptech), Siraz JMI (Colombian CBEs), Claes et al. (foie gras stage 1)
-- **4. How You Apply It:** Article 2 qualitative comparative analysis — interviewing high-responding vs low-responding entrepreneurs to trace learning mechanisms
+## 4. QUALITATIVE CASE STUDY (Mechanism & Process Discovery)
+- **1. Who Evaluates & What They Do:** The academic researcher acts as the investigator. They evaluate incubator managers, mentors, and entrepreneurs across longitudinal timeframes.
+- **2. How They Do It:** Conducting 60–90 minute semi-structured interviews, attending internal committee meetings, reviewing pitch logs, and analyzing internal documents. Data is coded thematically using Gioia / process-tracing methodology.
+- **3. Problems They Face:** (a) Retrospective recall bias (founders misremembering early events); (b) Researcher subjectivity; (c) Lack of statistical generalizability.
+- **4. How They Solve These Problems:** (a) Triangulating interviews with real-time archival records and meeting minutes; (b) Dual-coder inter-rater reliability checks; (c) Multi-case comparative designs (comparing successful vs stalled support structures).
+- **5. Application in Your Thesis:** Article 2 qualitative comparative study — interviewing high-responding vs low-responding entrepreneurs to trace the internal learning and signaling process.
 
 ## 5. QUANTITATIVE SURVEY (Self-Reported Perceptions)
-- **1. Popularity & Rigor:** ⚠️ STANDARD BUT CAUSALLY LIMITED — Common in entrepreneurship, but inherently cross-sectional and susceptible to common-method bias
-- **2. Data Collection & Robustness:** Multi-item Likert scales administered to founder cohorts; analyzed via Confirmatory Factor Analysis (CFA), Structural Equation Modeling (SEM), and cluster analysis
-- **3. Studies in Literature:** Bertrand, Benamara & Aldebert 2025 (n=122 students); Ghods, Ricard & Aldebert 2024 (n=150 entrepreneurs)
-- **4. How You Apply It:** Measurement instrument for founder self-legitimacy and perceived external legitimacy (acknowledged as founder-node proxy)
+- **1. Who Evaluates & What They Do:** Active founders evaluate themselves and their perceived standing in the market using psychometrically validated multi-item Likert scales.
+- **2. How They Do It:** Distributing structured digital questionnaires. Analyzed using Exploratory / Confirmatory Factor Analysis (CFA), Structural Equation Modeling (SEM), and cluster analysis.
+- **3. Problems They Face:** (a) Common-Method Variance (CMV) when independent and dependent variables are collected on the same survey; (b) Social desirability bias (founders overstating confidence); (c) Lack of causal directionality.
+- **4. How They Solve These Problems:** (a) Methodological separation: temporal spacing between waves (T0, T1, T4) and negative control items; (b) Anonymized survey administration; (c) Anchoring within an RCT framework to establish true causal direction.
+- **5. Application in Your Thesis:** Core measurement instrument for founder self-legitimacy (Bertrand scale) and perceived external legitimacy (Alexiou & Wiggins scale).
 
 ## 6. SOCIAL REPRESENTATIONS SURVEY (Cognitive Mapping)
-- **1. Popularity & Rigor:** ⚠️ NICHE SPECIALIST METHOD — Borrowed from social psychology, established in French entrepreneurship scholarship
-- **2. Data Collection & Robustness:** Free-association word tasks and centrality ranking; structural analysis separating central core beliefs from peripheral cognitive elements
-- **3. Studies in Literature:** Ghods, Ricard & Aldebert (E&RD 2024, n=150)
-- **4. How You Apply It:** Justifies treating the cross-border Franco-Italian regional context as containing distinct institutional reference frameworks`,
+- **1. Who Evaluates & What They Do:** Cohorts of practicing entrepreneurs evaluate the abstract concept of "the legitimate entrepreneur" by producing spontaneous word associations.
+- **2. How They Do It:** Respondents write the first 5 words that come to mind when prompted with "legitimate entrepreneur," then rank their importance (1 to 5). Analyzed using Vergès structural matrix (associative frequency × average rank) to isolate central core vs peripheral beliefs.
+- **3. Problems They Face:** (a) Lexical ambiguity (synonyms and varied phrasing across respondents); (b) Small sample sensitivity; (c) Cultural/linguistic differences across languages.
+- **4. How They Solve These Problems:** (a) Standardized lemmatization and semantic grouping dictionaries; (b) Bootstrapped rank-order significance testing; (c) Comparative multi-group analysis (domestic vs international operators).
+- **5. Application in Your Thesis:** Methodological rationale for treating the cross-border Franco-Italian regional context as containing distinct institutional reference frameworks.`,
 
 family: `# THE SCHOLARLY NETWORK & MASTER CANON (Structured Breakdown)
 *Uniform 4-line structure: 1. Research Question → 2. Core Finding / Verdict → 3. Methodology & Epistemic Base → 4. How You Use It in Thesis*

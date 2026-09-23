@@ -999,12 +999,8 @@ let mm = null;
 
 function render(key) {
   const { root } = transformer.transform(MAPS[key]);
-  (function foldBigBranch(n) {
-    if (/FRESH AMMUNITION/.test(n.content)) n.payload = { ...n.payload, fold: 1 };
-    (n.children || []).forEach(foldBigBranch);
-  })(root);
   if (!mm) {
-    mm = window.markmap.Markmap.create('#mindmap', { maxWidth: 500, initialExpandLevel: 5 }, root);
+    mm = window.markmap.Markmap.create('#mindmap', { maxWidth: 500, initialExpandLevel: 2 }, root);
   } else {
     mm.setData(root);
     mm.fit();

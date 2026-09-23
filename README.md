@@ -80,42 +80,42 @@ Key insight: a venture's state can flip purely because the *societal yardstick* 
 *Grouped by level on the dyad: **the judge** → **the connection** → **the object** → **the field**. Most new work sits in *the connection* — where this thesis lives.*
 
 **L1 · The judge — evaluator side (how the verdict forms)**
-- **[P16]** individual verdicts → collective validity (can mask low consensus) — Haack, Sieweke & Pfarrer 2025, JMS · 14 → Tost · ASSENT
-- **[P17]** societal acceptance ≠ institutional legitimacy — Alsheimer et al. 2024, RSER · 14 → Suchman · EXPECTATIONS
-- **[P18]** shifting norms → investor yardstick shifts → IPO diversity↑ — Kenney et al. 2024, SBE · 14 → STATES FLIP · Q11
-- **[P20]** judgment = variance + prediction + wisdom — Tsoukas et al. 2024, AM Annals · 12 → ASSENT · Siraz judges
-- **[P21]** CEO humor × evaluator schema-fit → social evaluation — König et al. 2024, AMR · 12 → categorical fit · cue bundles
+- **[P16]** individual verdicts → collective validity (can mask low consensus) — Haack, Sieweke & Pfarrer 2025, JMS · 14 → Tost · ASSENT · solves: validity/agreement blur → multi-level split (GFC data)
+- **[P17]** societal acceptance ≠ institutional legitimacy — Alsheimer et al. 2024, RSER · 14 → Suchman · EXPECTATIONS · solves: acceptance & legitimacy literatures never talked → integrates both
+- **[P18]** shifting norms → investor yardstick shifts → IPO diversity↑ — Kenney et al. 2024, SBE · 14 → STATES FLIP · Q11 · solves: how norms reshape founder-team judgments unknown → 30-yr IPO panel
+- **[P20]** judgment = variance + prediction + wisdom — Tsoukas et al. 2024, AM Annals · 12 → ASSENT · Siraz judges · solves: 'judgment' used loosely across fields → 3-perspective consolidation
+- **[P21]** CEO humor × evaluator schema-fit → social evaluation — König et al. 2024, AMR · 12 → categorical fit · cue bundles · solves: how evaluator schemas filter leader signals → humor-type × schema-fit model
 
 **L2 · The connection — signals crossing the founder↔evaluator boundary**
-- **[P09]** hype → expectations↑ → resources↑ (while pace kept) — Rady et al. 2025, JBV · 20 → CLAIM 2 · Zimmerman
-- **[P10]** founder updates ↔ backer sentiment — Wood et al. 2024, JBV · 19 → ASSENT maintenance
-- **[P11]** internal challenges → 8 inward legitimation strategies — Loos & Spraul 2024, JMS · 19 → Suddaby&Vaara · Bertrand
-- **[P13]** hype → legitimacy↑ then moral questioning → legitimacy↓↓ — Spivack et al. 2025, JBV · 17 → EMR 2026 · Claes · Q9
-- **[P15]** local legitimacy × brokerage → diffusion beyond ecosystem — Kansheba et al. 2024, IJEBR · 15 → ALDEBERT · social capability
-- **[P19]** crisis communication style → crowdfunding outcome — McKenny et al. 2024, ETP · 14 → Pollack · legitimation rhetoric
-- **[P24]** rebranding signals → host-market legitimacy (differs by development) — Ramos da Silva et al. 2024, IMR · 9 → Ghods · Q11
-- **[P26]** make-or-break intermediary → 3 legitimation pathways — Neuberger et al. 2024, AMJ · 7 → ALDEBERT · Fisher · Q8
-- **[P29]** secrecy justification → 7 discursive strategies (mix shifts) — Clarke et al. 2024, JBE · 7 → Suddaby&Vaara · P01
-- **[P28]** eWOM → gradual de-stigmatization → legitimation — Villers et al. 2024, JSR · 7 → 5-states · conditional illegitimacy
+- **[P09]** hype → expectations↑ → resources↑ (while pace kept) — Rady et al. 2025, JBV · 20 → CLAIM 2 · Zimmerman · solves: hype assumed always good → shows contingent value (expectations game)
+- **[P10]** founder updates ↔ backer sentiment — Wood et al. 2024, JBV · 19 → ASSENT maintenance · solves: hype decay over time unstudied → longitudinal update↔comment pairs
+- **[P11]** internal challenges → 8 inward legitimation strategies — Loos & Spraul 2024, JMS · 19 → Suddaby&Vaara · Bertrand · solves: legitimation studied only externally → maps internal repertoire
+- **[P13]** hype → legitimacy↑ then moral questioning → legitimacy↓↓ — Spivack et al. 2025, JBV · 17 → EMR 2026 · Claes · Q9 · solves: why hyped ventures crash → 3-phase legitimacy-volatility model
+- **[P15]** local legitimacy × brokerage → diffusion beyond ecosystem — Kansheba et al. 2024, IJEBR · 15 → ALDEBERT · social capability · solves: legitimacy assumed local → tests diffusion beyond home ecosystem
+- **[P19]** crisis communication style → crowdfunding outcome — McKenny et al. 2024, ETP · 14 → Pollack · legitimation rhetoric · solves: crisis comms black box → timing/target/nature dims + causal vignette
+- **[P24]** rebranding signals → host-market legitimacy (differs by development) — Ramos da Silva et al. 2024, IMR · 9 → Ghods · Q11 · solves: rebranding legitimacy untested cross-country → 6-country stakeholder case
+- **[P26]** make-or-break intermediary → 3 legitimation pathways — Neuberger et al. 2024, AMJ · 7 → ALDEBERT · Fisher · Q8 · solves: legitimation vs make-or-break intermediaries unstudied → accelerator ethnography
+- **[P29]** secrecy justification → 7 discursive strategies (mix shifts) — Clarke et al. 2024, JBE · 7 → Suddaby&Vaara · P01 · solves: how secrecy gets legitimated → 7-strategy narrative repertoire
+- **[P28]** eWOM → gradual de-stigmatization → legitimation — Villers et al. 2024, JSR · 7 → 5-states · conditional illegitimacy · solves: stigmatized-market legitimation mechanism → eWOM mixed-methods model
 
 **L3 · The object — venture side (what gets judged)**
-- **[P02]** green innovation → regulatory+social legitimacy → export↑ — Shu et al. 2024, MOR · 35 → regulative · Ghods
-- **[P04]** alliance with investor's rivals → ecosystem defence — Chen et al. 2024, JMS · 27 → social capability
-- **[P05]** resourcefulness → venture process (integrated model) — Williams et al. 2024, JMS · 23 → 5 capabilities · CLAIM 2
-- **[P07]** adjacent-category density → cognitive legitimacy spillover — Li, Cai & Bosma 2024, SBE · 21 → categorical fit · Siraz JMS
-- **[P27]** reconfigure category basis + experiential congruence → new-category legitimacy — Rhee, Lo & Durand 2025, OrgSci · 7 → cognitive · Navis&Glynn
+- **[P02]** green innovation → regulatory+social legitimacy → export↑ — Shu et al. 2024, MOR · 35 → regulative · Ghods · solves: EMF legitimacy barriers abroad → green innovation as legitimacy vehicle
+- **[P04]** alliance with investor's rivals → ecosystem defence — Chen et al. 2024, JMS · 27 → social capability · solves: venture vulnerability inside ecosystems → rival-alliance defence
+- **[P05]** resourcefulness → venture process (integrated model) — Williams et al. 2024, JMS · 23 → 5 capabilities · CLAIM 2 · solves: resourcefulness literature fragmented → integrative foundation
+- **[P07]** adjacent-category density → cognitive legitimacy spillover — Li, Cai & Bosma 2024, SBE · 21 → categorical fit · Siraz JMS · solves: how new forms gain cognitive legitimacy → category-spillover mechanism
+- **[P27]** reconfigure category basis + experiential congruence → new-category legitimacy — Rhee, Lo & Durand 2025, OrgSci · 7 → cognitive · Navis&Glynn · solves: how challengers legitimate inside an established category → 3 strategies
 
 **L4 · The field — macro environment (programs, categories, norms)**
-- **[P01]** strategies × positions × foundations × temporality × arenas → discursive legitimation — Vaara et al. 2024, JoM · 68 → Suddaby&Vaara
-- **[P03]** legitimacy = continuous create→maintain→(can)lose — Meyer & Tse 2025, IBR · 30 → 5-states · STATES FLIP
-- **[P06]** illegitimate actors → elite functionaries → drift/layering/reform — Rintamäki et al. 2024, AMR · 22 → 5-states
-- **[P08]** intensive mentoring → accelerator effect (active ingredient) — Rechter & Avnimelech 2024, SBE · 21 → ALDEBERT · STEP 5 · Campos
-- **[P12]** university incubator → social intrapreneurship (non-monetary) — Nafari et al. 2024, Technovation · 18 → atEnA · ALDEBERT
-- **[P14]** racial identity → lived entrepreneurial experience — Santos et al. 2024, SBE · 17 → Siraz bias · Q10
-- **[P22]** opportunity underexploitation → reproduced inequality — Lewis et al. 2024, AMR · 12 → intro · Q10
-- **[P23]** venture outcome = institution (brewery) + cohort (winery) — Avnimelech et al. 2024, SMJ · 12 → cohort fix · ALDEBERT
-- **[P25]** 3R strategies → marginalized legitimation — Spanuth & Urbano 2024, AMP · 8 → legitimation strategies · Siraz bias
-- **[P30]** accelerator effect × ecosystem support = complement or substitute — Qin 2025, JIBS · 3 → ALDEBERT · ecosystem
+- **[P01]** strategies × positions × foundations × temporality × arenas → discursive legitimation — Vaara et al. 2024, JoM · 68 → Suddaby&Vaara · solves: discursive legitimation fragmented → 5-element integrative framework
+- **[P03]** legitimacy = continuous create→maintain→(can)lose — Meyer & Tse 2025, IBR · 30 → 5-states · STATES FLIP · solves: legitimacy studied as snapshots → create/maintain/lose process view
+- **[P06]** illegitimate actors → elite functionaries → drift/layering/reform — Rintamäki et al. 2024, AMR · 22 → 5-states · solves: illegitimate actors treated as pure threat → shows their repair role
+- **[P08]** intensive mentoring → accelerator effect (active ingredient) — Rechter & Avnimelech 2024, SBE · 21 → ALDEBERT · STEP 5 · Campos · solves: which accelerator ingredient matters → isolates intensive mentoring
+- **[P12]** university incubator → social intrapreneurship (non-monetary) — Nafari et al. 2024, Technovation · 18 → atEnA · ALDEBERT · solves: incubators measured only economically → non-pecuniary social-value model
+- **[P14]** racial identity → lived entrepreneurial experience — Santos et al. 2024, SBE · 17 → Siraz bias · Q10 · solves: race treated as control variable → racial-identity-centered lived experience
+- **[P22]** opportunity underexploitation → reproduced inequality — Lewis et al. 2024, AMR · 12 → intro · Q10 · solves: entrepreneurship framed as equalizer → underexploitation → inequality
+- **[P23]** venture outcome = institution (brewery) + cohort (winery) — Avnimelech et al. 2024, SMJ · 12 → cohort fix · ALDEBERT · solves: accelerator vs cohort confounded → Bayesian variance decomposition (n=1,350)
+- **[P25]** 3R strategies → marginalized legitimation — Spanuth & Urbano 2024, AMP · 8 → legitimation strategies · Siraz bias · solves: how marginalization breaks → 3R legitimation strategies
+- **[P30]** accelerator effect × ecosystem support = complement or substitute — Qin 2025, JIBS · 3 → ALDEBERT · ecosystem · solves: accelerator effect assumed uniform → ecosystem-support moderator
 
 ## The committee's hardest questions — short answers
 

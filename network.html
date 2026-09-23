@@ -17,6 +17,11 @@
   .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
   #graph{display:block;width:100vw;height:calc(100vh - 108px);cursor:grab}
   #graph:active{cursor:grabbing}
+  section{border-top:1px solid var(--line)}
+  section h2{font-size:15px;margin:0;padding:14px 24px 2px}
+  section .sub{display:block;padding:0 24px 8px}
+  #disk{display:block;width:100vw;height:85vh;cursor:grab}
+  #disk:active{cursor:grabbing}
   .edge{stroke:var(--line);stroke-width:1}
   .journal{fill:var(--accent);stroke:#fff;stroke-width:2}
   .jlabel{font-size:11px;font-weight:600;fill:var(--ink);pointer-events:none}
@@ -31,17 +36,22 @@
 <body>
 <header>
   <h1>Paper → Journal network</h1>
-  <span class="sub">46 recent legitimacy papers · where each published · drag nodes, hover for details</span>
+  <span class="sub">49 papers · where each published · drag nodes, hover for details</span>
   <span class="nav"><a href="index.html">Guide</a><a href="map.html">Mind map</a></span>
 </header>
 <div class="legend" id="legend"></div>
 <svg id="graph"></svg>
+<section>
+  <h2>Journal disk — same papers, radial view</h2>
+  <span class="sub">Journals on the inner ring (size = # of your papers) · papers orbit their journal · sector width ∝ paper count · hover for details</span>
+  <svg id="disk"></svg>
+</section>
 <div id="tip"></div>
 <script src="d3.min.js"></script>
 <script src="papers.js"></script>
 <script>
-const LCOL = {L1:'#0969da', L2:'#1a7f37', L3:'#bf8700', L4:'#8250df'};
-const LNAME = {L1:'L1 Judge', L2:'L2 Connection', L3:'L3 Object', L4:'L4 Field'};
+const LCOL = {L1:'#0969da', L2:'#1a7f37', L3:'#bf8700', L4:'#8250df', S:'#cf222e'};
+const LNAME = {L1:'L1 Judge', L2:'L2 Connection', L3:'L3 Object', L4:'L4 Field', S:'S Scale anchor'};
 
 const journals = {};
 DATA.papers.forEach(p => { (journals[p.venue] = journals[p.venue] || []).push(p); });
@@ -121,6 +131,79 @@ sim.on('end', () => {
 document.getElementById('legend').innerHTML =
   Object.entries(LNAME).map(([k,v]) => `<span><span class="dot" style="background:${LCOL[k]}"></span>${v}</span>`).join('') +
   `<span style="margin-left:auto"><span class="dot" style="background:var(--accent)"></span>journal (size = # of your papers)</span>`;
+
+/* ---------- DISK VIEW: journals on a ring, papers orbiting in sectors ---------- */
+const dsvg = d3.select('#disk');
+const DW = dsvg.node().clientWidth, DH = dsvg.node().clientHeight;
+const cx = DW/2, cy = DH/2;
+const Rj = Math.min(DW, DH)/2 - 120;           // journal ring radius
+const Rp = Rj + 62;                            // paper orbit radius
+const dg = dsvg.append('g');
+dsvg.call(d3.zoom().on('zoom', e => dg.attr('transform', e.transform)));
+
+// sectors: width proportional to journal's paper count
+const jList = Object.entries(journals).map(([abbr, ps]) => ({abbr, ps}))
+  .sort((a,b) => b.ps.length - a.ps.length);
+const totalP = DATA.papers.length, GAP = 0.012;
+let a0 = -Math.PI/2;
+jList.forEach(j => {
+  const w = (j.ps.length/totalP) * (2*Math.PI - GAP*jList.length);
+  j.a0 = a0; j.a1 = a0 + w; j.mid = (a0 + a0 + w)/2; a0 = j.a1 + GAP;
+});
+
+// edges first (under nodes)
+jList.forEach(j => {
+  const jx = cx + Rj*Math.cos(j.mid), jy = cy + Rj*Math.sin(j.mid);
+  j.ps.forEach((p,i) => {
+    const a = j.a0 + (i + .5)/j.ps.length * (j.a1 - j.a0);
+    p._x = cx + Rp*Math.cos(a); p._y = cy + Rp*Math.sin(a); p._a = a;
+    dg.append('line').attr('class','edge')
+      .attr('x1', p._x).attr('y1', p._y).attr('x2', jx).attr('y2', jy);
+  });
+});
+
+// journals
+const dj = dg.append('g').selectAll('g').data(jList).join('g')
+  .attr('transform', d => `translate(${cx + Rj*Math.cos(d.mid)},${cy + Rj*Math.sin(d.mid)})`);
+dj.append('circle').attr('class','journal').attr('r', d => 14 + d.ps.length*3.5);
+dj.append('text').attr('class','jcount').attr('dy',3).text(d => d.ps.length);
+dj.append('text').attr('class','jlabel')
+  .attr('text-anchor','middle')
+  .attr('transform', d => {
+    const deg = d.mid*180/Math.PI + 90;
+    const flip = deg > 90 && deg < 270 ? 180 : 0;
+    return `rotate(${deg + flip}) translate(0,${flip ? 20 + d.ps.length*3.5 : -(20 + d.ps.length*3.5)})`;
+  })
+  .text(d => {
+    const n = DATA.journals[d.abbr];
+    if (d.ps.length < 3) return d.abbr;
+    return n.length > 30 ? n.slice(0,29)+'…' : n;
+  });
+
+// papers
+const dp = dg.append('g').selectAll('g').data(DATA.papers).join('g')
+  .attr('transform', d => `translate(${d._x},${d._y})`);
+dp.append('circle').attr('r', 7).attr('fill', d => LCOL[d.level])
+  .attr('stroke','#fff').attr('stroke-width',1.5);
+dp.append('text').attr('class','plabel')
+  .attr('transform', d => {
+    const deg = d._a*180/Math.PI + 90;
+    const flip = deg > 90 && deg < 270;
+    return `rotate(${deg + (flip?180:0)}) translate(${flip?-11:11},3)`;
+  })
+  .attr('text-anchor', d => { const deg = d._a*180/Math.PI + 90; return (deg > 90 && deg < 270) ? 'end' : 'start'; })
+  .text(d => d.id);
+
+// same tooltips
+function showTip(e, d){
+  if (d.ps) tip.innerHTML = `<b>${DATA.journals[d.abbr]}</b><span class="meta">${d.ps.length} paper${d.ps.length>1?'s':''} in your map</span>`;
+  else tip.innerHTML = `<b>[${d.id}] ${d.formula}</b>${d.authors} ${d.year}, ${d.venue} · ${d.cit} cit.<div class="solves">solves: ${d.solves}</div><div class="meta">${LNAME[d.level]}</div>`;
+  tip.style.display='block';
+}
+const hover = sel => sel.on('mouseover', showTip)
+  .on('mousemove', e => { tip.style.left = Math.min(e.clientX+14, innerWidth-360)+'px'; tip.style.top = (e.clientY+14)+'px'; })
+  .on('mouseout', () => tip.style.display='none');
+hover(dj); hover(dp);
 </script>
 </body>
 </html>

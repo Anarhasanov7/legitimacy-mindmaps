@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paper–Journal Network — Legitimacy Map</title>
+<style>
+  :root{--ink:#1f2328;--muted:#656d76;--line:#d0d7de;--bg:#ffffff;--soft:#f6f8fa;--accent:#0969da}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+  header{padding:20px 24px 14px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+  h1{font-size:20px;margin:0}
+  .sub{color:var(--muted);font-size:13px}
+  .nav{margin-left:auto;font-size:13px}
+  .nav a{color:var(--accent);text-decoration:none;margin-left:14px}
+  .legend{display:flex;gap:14px;padding:10px 24px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted);flex-wrap:wrap}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+  #graph{display:block;width:100vw;height:calc(100vh - 108px);cursor:grab}
+  #graph:active{cursor:grabbing}
+  .edge{stroke:var(--line);stroke-width:1}
+  .journal{fill:var(--accent);stroke:#fff;stroke-width:2}
+  .jlabel{font-size:11px;font-weight:600;fill:var(--ink);pointer-events:none}
+  .jcount{font-size:9px;fill:#fff;font-weight:700;pointer-events:none;text-anchor:middle}
+  .plabel{font-size:9.5px;fill:var(--muted);pointer-events:none;font-weight:600}
+  #tip{position:fixed;display:none;max-width:340px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,.12);pointer-events:none;z-index:10}
+  #tip b{display:block;margin-bottom:4px}
+  #tip .meta{color:var(--muted);font-size:12px;margin-top:6px}
+  #tip .solves{color:var(--accent);font-size:12px;margin-top:4px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Paper → Journal network</h1>
+  <span class="sub">46 recent legitimacy papers · where each published · drag nodes, hover for details</span>
+  <span class="nav"><a href="index.html">Guide</a><a href="map.html">Mind map</a></span>
+</header>
+<div class="legend" id="legend"></div>
+<svg id="graph"></svg>
+<div id="tip"></div>
+<script src="d3.min.js"></script>
+<script src="papers.js"></script>
+<script>
+const LCOL = {L1:'#0969da', L2:'#1a7f37', L3:'#bf8700', L4:'#8250df'};
+const LNAME = {L1:'L1 Judge', L2:'L2 Connection', L3:'L3 Object', L4:'L4 Field'};
+
+const journals = {};
+DATA.papers.forEach(p => { (journals[p.venue] = journals[p.venue] || []).push(p); });
+
+const nodes = [], links = [];
+Object.entries(journals).forEach(([abbr, ps]) => {
+  nodes.push({id:abbr, type:'journal', name:DATA.journals[abbr], n:ps.length});
+});
+DATA.papers.forEach(p => {
+  nodes.push({id:p.id, type:'paper', p});
+  links.push({source:p.id, target:p.venue});
+});
+
+const svg = d3.select('#graph'), tip = document.getElementById('tip');
+const W = svg.node().clientWidth, H = svg.node().clientHeight;
+const g = svg.append('g');
+svg.call(d3.zoom().on('zoom', e => g.attr('transform', e.transform)));
+
+const sim = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(links).id(d => d.id).distance(70))
+  .force('charge', d3.forceManyBody().strength(d => d.type === 'journal' ? -260 : -50))
+  .force('center', d3.forceCenter(W/2, H/2))
+  .force('collide', d3.forceCollide(d => d.type === 'journal' ? 30 + d.n*4 : 14));
+
+const link = g.append('g').selectAll('line').data(links).join('line').attr('class','edge');
+
+const node = g.append('g').selectAll('g').data(nodes).join('g')
+  .call(d3.drag()
+    .on('start', (e,d) => { if(!e.active) sim.alphaTarget(.3).restart(); d.fx=d.x; d.fy=d.y; })
+    .on('drag', (e,d) => { d.fx=e.x; d.fy=e.y; })
+    .on('end', (e,d) => { if(!e.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+
+node.filter(d => d.type==='journal').append('circle')
+  .attr('class','journal').attr('r', d => 14 + d.n*3.5);
+node.filter(d => d.type==='journal').append('text')
+  .attr('class','jcount').attr('dy',3).text(d => d.n);
+node.filter(d => d.type==='journal').append('text')
+  .attr('class','jlabel').attr('y', d => -18 - d.n*3.5).attr('text-anchor','middle')
+  .text(d => d.name.length > 34 ? d.name.slice(0,33)+'…' : d.name);
+
+node.filter(d => d.type==='paper').append('circle')
+  .attr('r', 8).attr('fill', d => LCOL[d.p.level]).attr('stroke','#fff').attr('stroke-width',1.5);
+node.filter(d => d.type==='paper').append('text')
+  .attr('class','plabel').attr('x', 11).attr('y', 3).text(d => d.id);
+
+node.on('mouseover', (e,d) => {
+    if(d.type==='journal'){
+      tip.innerHTML = `<b>${d.name}</b><span class="meta">${d.n} paper${d.n>1?'s':''} in your map</span>`;
+    } else {
+      const p=d.p;
+      tip.innerHTML = `<b>[${p.id}] ${p.formula}</b>${p.authors} ${p.year}, ${p.venue} · ${p.cit} cit.<div class="solves">solves: ${p.solves}</div><div class="meta">${LNAME[p.level]}</div>`;
+    }
+    tip.style.display='block';
+  })
+  .on('mousemove', e => {
+    tip.style.left = Math.min(e.clientX+14, innerWidth-360)+'px';
+    tip.style.top = (e.clientY+14)+'px';
+  })
+  .on('mouseout', () => tip.style.display='none');
+
+sim.on('tick', () => {
+  link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
+      .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+  node.attr('transform', d => `translate(${d.x},${d.y})`);
+});
+
+let fitted = false;
+sim.on('end', () => {
+  if (fitted) return; fitted = true;
+  const xs = nodes.map(d=>d.x), ys = nodes.map(d=>d.y);
+  const x1=Math.min(...xs)-60, x2=Math.max(...xs)+60, y1=Math.min(...ys)-60, y2=Math.max(...ys)+60;
+  const k = Math.min(W/(x2-x1), H/(y2-y1), 1);
+  svg.transition().duration(500).call(d3.zoom().transform,
+    d3.zoomIdentity.translate(W/2-(x1+x2)/2*k, H/2-(y1+y2)/2*k).scale(k));
+});
+
+document.getElementById('legend').innerHTML =
+  Object.entries(LNAME).map(([k,v]) => `<span><span class="dot" style="background:${LCOL[k]}"></span>${v}</span>`).join('') +
+  `<span style="margin-left:auto"><span class="dot" style="background:var(--accent)"></span>journal (size = # of your papers)</span>`;
+</script>
+</body>
+</html>

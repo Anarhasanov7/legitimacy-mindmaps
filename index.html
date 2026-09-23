@@ -20,7 +20,7 @@
 <div id="sidebar">
   <h1>Legitimacy Mind Maps</h1>
   <p>Select a map view below. Click nodes to expand or collapse. Scroll to zoom.</p>
-  <button class="btn active" data-map="punchlines"><b>1. Field Map (Deep Method Cards)</b><small>Verdict → Sample, Region & Period → Method & Modeling → Caveats & How Solved → For You</small></button>
+  <button class="btn active" data-map="punchlines"><b>1. Field Map (Context & Scope First)</b><small>Where it sits → Title (Punchline) → 1-line Verdict → Explanation</small></button>
   <button class="btn" data-map="methods"><b>2. Method Toolbox (Deep Breakdown)</b><small>Who evaluates → What they do → How they do it → Problems faced → Solutions</small></button>
   <button class="btn" data-map="family"><b>3. Scholarly Network (Detailed)</b><small>Question → Finding → Methodology → How You Use It</small></button>
   <button class="btn" data-map="qa"><b>4. Committee Defense Q&A (12 Questions)</b><small>Model Answer (Core + Logic) → Backing Literature</small></button>
@@ -38,8 +38,8 @@
 <script>
 const MAPS = {
 
-punchlines: `# LEGITIMACY FIELD — Comprehensive Methodological Breakdown
-*Standardized 5-line card per study: 1. Verdict & Effect → 2. Sample, Selection, Region & Timeframe → 3. Method & Modeling → 4. Methodological Caveats & How They Solved It → 5. How You Use It in Thesis*
+punchlines: `# LEGITIMACY FIELD — Contextual & Scoped Breakdown
+*Every paper shows: 1. Where it sits (Scope) → 2. Punchline Title → 3. One-line Verdict → 4. Explanation & Details*
 
 ## CORE CONSTRUCTS (The Master Vocabulary)
 - **Propriety** = Micro-level individual evaluator belief
@@ -47,109 +47,149 @@ punchlines: `# LEGITIMACY FIELD — Comprehensive Methodological Breakdown
 - **Consensus** = Meso-level agreement across evaluators
 - **Reference Framework** = Issue-specific norms, values, and beliefs (NVBs) against which subjects are evaluated
 
-## SIRAZ (Evaluator Cognition, Cues & Bias)
+## SIRAZ — Inside the Evaluator's Head (External)
+*Scope: How outside judges (investors, clients, citizens) process information and form legitimacy judgments*
 
 ### JMS online first: "Looking Like a Real Business Beats Endorsements"
-- **1. Verdict:** ✅ YES, CONFIRMED (p < 0.001) — Categorical fit is the #1 strongest driver of propriety; negative cues have stronger penalizing impact than positive cues help
-- **2. Sample, Selection, Region & Timeframe:** 1,866 online panel respondents (Study 1: n=924, Study 2: n=942) recruited via Prolific/MTurk in Germany/UK (2022–2023); filtered for attentive adult evaluators
-- **3. Method & Modeling:** $2 \times 2 \times 2$ Between-Subjects Factorial Survey Experiment manipulating category fit (high/low), authorization (present/absent), and endorsement (present/absent); analyzed using Two-Way ANOVA and OLS regression with interaction terms
-- **4. Caveats & How Solved:** *Caveats:* Hypothetical vignette bias and online panel inattention. *How Solved:* Implemented strict pre-manipulation attention checks, randomized presentation order, and replicated findings across two independent study waves
-- **5. How you use it:** Empirically proves that teaching **cognitive positioning & category framing** in your 12h module is the highest-leverage lever to build external propriety
+- **Verdict:** ✅ YES, CONFIRMED — Categorical fit is the #1 strongest driver of propriety
+- **Explanation & Details:** 
+  - *Scope:* External Evaluator Cognition (Micro-level)
+  - *What they did:* Showed evaluators different venture profiles with randomized cues to see which signal builds legitimacy fastest
+  - *Sample & Timeframe:* 1,866 evaluators across 2 studies in Germany/UK (2022–2023)
+  - *Method:* $2 \times 2 \times 2$ Factorial Experiment; OLS regression with interaction terms
+  - *Caveats & Solved:* Panel inattention → strict attention checks + replication across 2 waves
+  - *For You:* Direct justification for teaching **cognitive positioning & category framing** in your 12h module
 
 ### EMR 2026: "Contradictory Signals Leave Evaluators Stuck in the Middle"
-- **1. Verdict:** ✅ YES, CONFIRMED (p < 0.01) — Incongruent cue bundles produce unresolved intermediate "grey area" judgments; evaluators discount cues conflicting with their personal values
-- **2. Sample, Selection, Region & Timeframe:** 247 evaluators making 3,952 evaluations (16 profiles each) in France & Spain (2021–2023); stratified by age, gender, and environmental attitudes
-- **3. Method & Modeling:** Full-Profile Conjoint Experiment with orthogonal randomized attributes (public opinion, economic impact, regulatory license, operator longevity); analyzed using Hierarchical Multilevel Linear Regression (Level 1 ratings nested in Level 2 evaluators)
-- **4. Caveats & How Solved:** *Caveats:* High cognitive load / rating fatigue across 16 full profiles; personal value endogeneity. *How Solved:* Orthogonal fractional design minimized correlation between attributes; pre-measured evaluator environmentalism as a standalone moderator
-- **5. How you use it:** Proves training must deliver **cue bundle coherence** across all 5 capabilities; contradictory signals (e.g. high compliance + informal pitching) stall founders in the grey zone
+- **Verdict:** ✅ YES, CONFIRMED — Mixed signal bundles produce unresolved intermediate "grey area" judgments
+- **Explanation & Details:** 
+  - *Scope:* External Evaluator Cognition (Micro-level)
+  - *What they did:* Tested how evaluators react when a venture sends positive and negative signals at the same time
+  - *Sample & Timeframe:* 247 evaluators rating 16 profiles each (3,952 evaluations) in France & Spain (2021–2023)
+  - *Method:* Full-Profile Conjoint Experiment; Multilevel Linear Regression (random intercepts)
+  - *Caveats & Solved:* Rating fatigue → orthogonal fractional design keeping profiles to 16 per judge
+  - *For You:* Proves your module must teach **cue bundle coherence** across all 5 capabilities
 
 ### EMR 2025: "Legitimation Strategies Can Backfire if Audience Disapproves"
-- **1. Verdict:** ⚠️ YES, CONFIRMED-NEGATIVE (Backfire Effect) — Industry-favored legitimation strategies were judged improper by external evaluators and actively damaged venture legitimacy
-- **2. Sample, Selection, Region & Timeframe:** French foie gras sector: Stage 1 = qualitative interviews with 12 producers + 3 industry trade associations; Stage 2 = 31 evaluators rating 32 profiles (992 evaluations) in France (2019–2022)
-- **3. Method & Modeling:** Sequential Mixed Methods: Inductive thematic coding to identify the 5 strategies in use, followed by full-profile metric conjoint regression testing evaluator appropriateness ratings
-- **4. Caveats & How Solved:** *Caveats:* Focused evaluator sample size (n=31) and industry-specific controversy. *How Solved:* Maximized within-subject power (32 orthogonal combinations per evaluator = 992 observations) and triangulated with industry association fieldwork
-- **5. How you use it:** Direct justification for why your RCT is necessary: you cannot assume trained strategies automatically help; testing appropriateness prevents backfire
+- **Verdict:** ⚠️ YES, CONFIRMED-NEGATIVE — Industry-favored strategies backfired when evaluators deemed the strategy itself improper
+- **Explanation & Details:** 
+  - *Scope:* External Evaluator Judgment of Strategies (Micro-level)
+  - *What they did:* Found the 5 legitimation strategies foie gras producers use, then tested if evaluators find them appropriate
+  - *Sample & Timeframe:* 12 producer interviews + 3 associations, then 31 evaluators × 32 profiles (992 evals) in France (2019–2022)
+  - *Method:* Mixed Methods: Qualitative coding → Metric conjoint regression
+  - *Caveats & Solved:* Small evaluator sample (n=31) → maximized within-subject power (32 combinations each)
+  - *For You:* Justifies your RCT: training effects must be tested because inappropriate signaling hurts
 
 ### AOM 2020: "Failed Women & Immigrant Founders Face a Legitimacy Penalty"
-- **1. Verdict:** ✅ YES, CONFIRMED (p < 0.01) — Minorities face harsher post-failure penalties; formal education offsets significantly less penalty for minority founders
-- **2. Sample, Selection, Region & Timeframe:** 74 evaluators reviewing 32 failed venture profiles each (2,368 total evaluations) in Europe (2018–2019); selected from business students and retail investors
-- **3. Method & Modeling:** Metric Conjoint Experiment manipulating founder gender, immigrant status, education level, and failure severity; analyzed via Multilevel Random-Intercept Regression
-- **4. Caveats & How Solved:** *Caveats:* Social desirability bias (evaluators concealing gender/ethnic prejudice). *How Solved:* Conjoint orthogonal randomization obscures the specific hypothesis by varying financial numbers and debt simultaneously
-- **5. How you use it:** Empirical justification for subgroup moderation analyses in ATENA to test if training offsets structural identity barriers
+- **Verdict:** ✅ YES, CONFIRMED — Minorities face harsher post-failure penalties; credentials compensate less for them
+- **Explanation & Details:** 
+  - *Scope:* External Evaluator Bias & Stereotyping (Micro-level)
+  - *What they did:* Tested whether evaluators judge identical failures differently based on founder demographics
+  - *Sample & Timeframe:* 74 evaluators rating 32 profiles each (2,368 evaluations) in Europe (2018–2019)
+  - *Method:* Metric Conjoint Experiment; Multilevel Random-Intercept Regression
+  - *Caveats & Solved:* Social desirability bias → orthogonal profile randomization obscuring the hypothesis
+  - *For You:* Empirical justification for subgroup moderation analyses in ATENA
 
 ### JBE 2026: "Ethnic Bias Sits in the Evaluation System, Not Just Prejudiced Individuals"
-- **1. Verdict:** ✅ YES, CONFIRMED (p < 0.001, Counterintuitive) — Latinx founders rated lower in funding-worthiness even with equal/lower debt; Latinx evaluators were not more lenient
-- **2. Sample, Selection, Region & Timeframe:** 781 US adult evaluators rating 16 randomized founder profiles each (12,496 funding-worthiness judgments) across the United States (2021–2024); quota-sampled for ethnic representation (White and Latinx evaluators)
-- **3. Method & Modeling:** Large-scale Full-profile Conjoint Experiment manipulating founder surname (Latinx vs Anglo), venture debt, and track record; analyzed using Mixed-Effects OLS with cross-level interaction terms
-- **4. Caveats & How Solved:** *Caveats:* Confounding ethnicity with socioeconomic status or financial risk. *How Solved:* Strict orthogonal control holding debt levels, revenues, and credit history completely identical across surname conditions
-- **5. How you use it:** Proves your unconventional target population faces systemic baseline legitimacy deficits, justifying specialized entrepreneurship interventions
+- **Verdict:** ✅ YES, CONFIRMED — Latinx founders rated lower even at equal/lower debt; in-group judges were not kinder
+- **Explanation & Details:** 
+  - *Scope:* External Evaluator Systemic Bias (Micro-level)
+  - *What they did:* Tested if surname ethnicity alone changes funding-worthiness scores after venture failure
+  - *Sample & Timeframe:* 781 US evaluators rating 16 profiles each (12,496 evaluations) across the US (2021–2024)
+  - *Method:* Full-profile Conjoint Experiment; Mixed-Effects OLS with cross-level interactions
+  - *Caveats & Solved:* Confounding ethnicity with risk → strict orthogonal control holding debt/revenue identical
+  - *For You:* Proves your unconventional target population faces structural baseline legitimacy deficits
 
 ### JMS 2023: "Legitimacy is Not Binary — It Spans 5 Distinct Qualitative States"
-- **1. Verdict:** 💡 THEORY / PROPOSED (Conceptual Contribution, No Empirical Test) — Legitimacy is not a 1-dimensional scale; it spans 5 qualitatively distinct states governed by reference framework stability
-- **2. Sample, Selection, Region & Timeframe:** Broad conceptual synthesis of 50+ years of institutional theory and legitimacy scholarship (Suchman, Tost, Bitektine, Haack, Vaara)
-- **3. Method & Modeling:** Deductive Conceptual Synthesis, Discursive Rhetorical Mapping, and Dynamic Transition Modeling (Figure 2)
-- **4. Caveats & How Solved:** *Caveats:* Pure theory paper with no statistical empirical test. *How Solved:* Grounded in extensively validated real-world cases (GMO foods, commercial aviation, medical cannabis, ride-sharing platforms)
-- **5. How you use it:** Theoretical foundation for arguing novice founders begin in **Unknown (Undecided)** legitimacy, and training functions as a state-transition mechanism
+- **Verdict:** 💡 THEORY / PROPOSED — Legitimacy spans 5 qualitatively distinct states governed by reference framework stability
+- **Explanation & Details:** 
+  - *Scope:* Societal & Conceptual Framework (Macro-level)
+  - *What they did:* Synthesized 50+ years of theory to formally map the grey area between legitimacy and illegitimacy
+  - *Sample & Timeframe:* Conceptual synthesis of institutional literature (Suchman, Tost, Bitektine, Vaara)
+  - *Method:* Deductive Conceptual Synthesis, Discursive Rhetorical Mapping, Dynamic Transition Modeling
+  - *Caveats & Solved:* No empirical data → grounded in extensively validated real-world cases (GMOs, medical cannabis, aviation)
+  - *For You:* Theoretical foundation for arguing novice founders begin in **Unknown (Undecided)** legitimacy
 
-## ALDEBERT & ECOSYSTEM (Support Structures & Legitimacy Transfer)
+## ALDEBERT & ECOSYSTEM — The Support Structure & Region (External)
+*Scope: How regional incubators, accelerators, and support structures build and transfer legitimacy to ventures*
 
 ### AEI 2021/2023: "An Accelerator Must Build Its Own Legitimacy Before It Can Transfer It"
-- **1. Verdict:** ✅ YES, CONFIRMED-CONDITIONAL (Qualitative Mechanism) — Accelerators transfer legitimacy in sequential stages, but repeated mobilization mechanisms experience audience fatigue and decay
-- **2. Sample, Selection, Region & Timeframe:** 1 regional accelerator program in South of France tracked longitudinally across 24 months of active fieldwork (2020–2022); comprehensive access to management, mentors, and 3 cohorts of cohort founders
-- **3. Method & Modeling:** Longitudinal Qualitative Single Case Study: 34 semi-structured interviews, participant observation in selection juries, and archival document coding mapped against Fisher et al. (2017) mechanisms
-- **4. Caveats & How Solved:** *Caveats:* Single-case generalizability and retrospective storytelling. *How Solved:* Multi-year real-time longitudinal tracking and data source triangulation (interviews + internal jury rubrics + founder performance tracking)
-- **5. How you use it:** atEnA is an accelerator/support structure; your experimental baseline holds program legitimacy constant to isolate the module's incremental effect
+- **Verdict:** ✅ YES, CONFIRMED-CONDITIONAL — Support structures must legitimate themselves before transferring legitimacy to founders
+- **Explanation & Details:** 
+  - *Scope:* Ecosystem / Support Structure (Meso-level)
+  - *What they did:* Tracked a startup accelerator's internal legitimacy-building process over 24 months
+  - *Sample & Timeframe:* 1 regional accelerator in South of France tracked via 34 interviews + jury observation (2020–2022)
+  - *Method:* Longitudinal Qualitative Case Study mapped against Fisher et al. (2017)
+  - *Caveats & Solved:* Single-case generalizability → multi-year real-time tracking + data triangulation
+  - *For You:* atEnA is an accelerator; your baseline holds program legitimacy constant to isolate the module's effect
 
 ### E&I 2024: "Large Corporations Are the Missing Bridge for Deeptech Legitimacy"
-- **1. Verdict:** ✅ YES, CONFIRMED (Qualitative Mechanism) — Public incubators provide capital but cannot confer commercial legitimacy; corporate partnerships bridge the legitimacy gap
-- **2. Sample, Selection, Region & Timeframe:** 2 French University Incubators (Marseille / Aix region) and 8 affiliated deeptech academic spinoffs (2021–2023); selected across biotech and material sciences
-- **3. Method & Modeling:** Multi-case Qualitative Comparative Study: Semi-structured interviews with incubator directors, technology transfer officers (TTOs), corporate innovation managers, and founder scientists
-- **4. Caveats & How Solved:** *Caveats:* Highly specialized deeptech context may not apply to non-tech startups. *How Solved:* Cross-case pattern matching isolating the underlying relational mechanism (legitimacy bridging via reputable corporate partners)
-- **5. How you use it:** Contextualizes atEnA's institutional partner network (Chambers of Commerce, regional industrial partners) as external legitimacy bridges
+- **Verdict:** ✅ YES, CONFIRMED — University incubators provide capital but cannot confer commercial legitimacy; corporate partners bridge the gap
+- **Explanation & Details:** 
+  - *Scope:* Ecosystem / Institutional Partners (Meso-level)
+  - *What they did:* Studied how deep-tech startups lacking track records get legitimized in the market
+  - *Sample & Timeframe:* 2 French University Incubators and 8 deeptech spinoffs (2021–2023)
+  - *Method:* Comparative Multi-case Qualitative Field Study (TTOs, managers, founders)
+  - *Caveats & Solved:* Deeptech niche specificity → cross-case pattern matching isolating the relational bridge mechanism
+  - *For You:* Contextualizes atEnA's institutional partner network (CCIs, universities) as legitimacy bridges
 
 ### E&RD 2024: "The Mental Model of a 'Legitimate Entrepreneur' Changes by Context"
-- **1. Verdict:** ✅ YES, CONFIRMED (p < 0.05, Significant Distance) — Domestic vs international entrepreneurs hold structurally divergent cognitive representations of what constitutes a legitimate enterprise
-- **2. Sample, Selection, Region & Timeframe:** 150 French entrepreneurs (75 strictly domestic operators, 75 active international operators) surveyed across France (2019–2021)
-- **3. Method & Modeling:** Social Representations Survey: Evocation / free-association word tasks analyzed using Vergès structural matrix (frequency × average associative rank) and similarity graph analysis
-- **4. Caveats & How Solved:** *Caveats:* Small sample for broad national generalization; subjectivity in word grouping. *How Solved:* Standardized lemmatization dictionary and dual-researcher semantic categorization with Cohen's Kappa inter-coder reliability > 0.85
-- **5. How you use it:** Rationale for modeling cross-border regional context (France vs Italy) as a formal moderator rather than pooling data blindly
+- **Verdict:** ✅ YES, CONFIRMED — Domestic vs international founders hold different mental images of legitimacy
+- **Explanation & Details:** 
+  - *Scope:* Ecosystem / Regional Cognition (Meso-level)
+  - *What they did:* Mapped the collective "mental picture" of a legitimate entrepreneur across operating environments
+  - *Sample & Timeframe:* 150 French entrepreneurs (75 domestic vs 75 international) surveyed in France (2019–2021)
+  - *Method:* Social Representations Survey (evocation word tasks analyzed via Vergès structural matrix)
+  - *Caveats & Solved:* Subjective word grouping → standardized lemmatization + dual-coder inter-rater checks (Kappa > 0.85)
+  - *For You:* Rationale for modeling cross-border context (France vs Italy) as a formal moderator
 
 ### BJM 2026: "Legitimacy Can Be Scored Directly from Venture Texts and Predicts Failure"
-- **1. Verdict:** ✅ YES, CONFIRMED (p < 0.001, Outcome Validation) — Multidimensional textual legitimacy scores extracted from venture communications reliably predict venture survival vs failure
-- **2. Sample, Selection, Region & Timeframe:** 524 venture press releases and communication artifacts paired with longitudinal firm survival data over a 5-year tracking window (2018–2023) across France & US (Ghods, Ricard, Aldebert & Schoon)
-- **3. Method & Modeling:** Computational Text Analysis on Object–Audience Dyads: Multi-dimensional dictionary NLP scoring validated via Confirmatory Factor Analysis (CFA) against human expert ratings, and tested via Cox Proportional Hazards survival regression
-- **4. Caveats & How Solved:** *Caveats:* NLP dictionary bias / algorithmic misinterpretation of promotional language. *How Solved:* Multi-stage expert human calibration (panel of management professors) and out-of-sample econometric validation against hard firm death/survival
-- **5. How you use it:** Provides an objective methodological escape hatch to address common-method variance (coding participant pitch decks and applications directly)
+- **Verdict:** ✅ YES, CONFIRMED — Text-derived legitimacy scores reliably predict venture survival vs failure
+- **Explanation & Details:** 
+  - *Scope:* Measurement / Textual Artifact (Macro-level)
+  - *What they did:* Built an NLP tool that scores legitimacy from venture communications and validated it against real outcomes
+  - *Sample & Timeframe:* 524 venture press releases paired with 5-year firm survival tracking (2018–2023) across France & US
+  - *Method:* Computational Text Analysis on Object–Audience Dyads; Cox Proportional Hazards survival regression
+  - *Caveats & Solved:* NLP dictionary bias → expert human calibration + out-of-sample econometric validation
+  - *For You:* Objective validation tool to score participant pitch decks and eliminate CMV critiques
 
 ### HAL 2025: "Feeling Illegitimate Triggers Impostor Syndrome and Paralyzes Founders"
-- **1. Verdict:** ⚠️ YES, CONFIRMED (Cross-Sectional Correlation, p < 0.01) — Internalized feelings of illegitimacy foster impostor syndrome, directly suppressing entrepreneurial action and intention
-- **2. Sample, Selection, Region & Timeframe:** 122 students (economics, business management, and active PEPITE student-entrepreneurs) at Aix-Marseille University (2023–2024)
-- **3. Method & Modeling:** Quantitative Survey utilizing Daisy Bertrand's 4-dimensional self-legitimacy scale; analyzed via hierarchical cluster analysis (identifying 3 student profiles) and structural equation regression
-- **4. Caveats & How Solved:** *Caveats:* Cross-sectional student sample; cannot establish strict temporal causality. *How Solved:* Validated psychometric instrument structure through exploratory factor analysis and differentiated active student founders from non-founders
-- **5. How you use it:** Direct empirical precedent for adopting Daisy Bertrand's self-legitimacy scale as your central psychological mediator
+- **Verdict:** ⚠️ YES, CONFIRMED (Cross-Sectional) — Internalized illegitimacy feeds impostor syndrome, suppressing intention
+- **Explanation & Details:** 
+  - *Scope:* Internal Founder Cognition (Micro-level, founder side)
+  - *What they did:* Tested whether founders' internal feelings of illegitimacy stop them from acting entrepreneurially
+  - *Sample & Timeframe:* 122 students & student-entrepreneurs at Aix-Marseille University (2023–2024)
+  - *Method:* Quantitative Survey using Bertrand's scale; hierarchical cluster analysis + structural equation regression
+  - *Caveats & Solved:* Cross-sectional student sample → validated scale via factor analysis + differentiated active founders
+  - *For You:* Empirical precedent for using Daisy Bertrand's self-legitimacy scale as your psychological mediator
 
-## SCHOON & GHODS (Operationalization & The Dyad)
+## SCHOON & GHODS — Measurement & The Boundary (Cross-Cutting)
+*Scope: How to properly define, measure, and score legitimacy across the founder-evaluator boundary*
 
 ### Schoon 2022 (ASR): "Legitimacy Lives Only in the Dyad: Object + Audience + Relation"
-- **1. Verdict:** 💡 THEORY / PROPOSED (Adopted Field Standard, ~140 Citations) — Legitimacy is strictly a relational dyad requiring Expectations + Assent + Conformity; without both nodes, it is merely prestige or reputation
-- **2. Sample, Selection, Region & Timeframe:** Definitive sociological synthesis across 50+ years of social science literature (Weber, Suchman, Deephouse, Bitektine, Tost)
-- **3. Method & Modeling:** Relational Sociological Theory Synthesis & Dyadic Structural Formalization (Published in American Sociological Review)
-- **4. Caveats & How Solved:** *Caveats:* Highly abstract sociological modeling with high barrier to empirical measurement. *How Solved:* Specified 3 concrete operational conditions (Expectations, Assent, Conformity) that can be measured independently at each node
-- **5. How you use it:** Accurately defines your survey boundary as the founder-perceived node of Schoon's dyad, turning a potential critique into an informed design choice
+- **Verdict:** 💡 THEORY / PROPOSED — Legitimacy requires Expectations + Assent + Conformity; it is a relation, not a property
+- **Explanation & Details:** 
+  - *Scope:* Measurement / Relational Dyad (Cross-cutting theory)
+  - *What they did:* Defined the necessary relational conditions to accurately operationalize legitimacy vs related concepts (prestige, reputation)
+  - *Sample & Timeframe:* Sociological synthesis across 50+ years of literature (Weber, Suchman, Tost)
+  - *Method:* Relational Sociological Theory Synthesis & Dyadic Structural Formalization
+  - *Caveats & Solved:* Abstract modeling → specified 3 measurable operational conditions (Expectations, Assent, Conformity)
+  - *For You:* Defines your survey boundary as the founder-perceived node of Schoon's dyad
 
 ### Ghods 2021 (PhD Thesis, AMU): "Legitimacy Boosts Cross-Border (International) Venture Performance"
-- **1. Verdict:** ✅ YES, CONFIRMED (p < 0.05) — Having high legitimacy helps internationalizing startups succeed; without legitimacy, going cross-border into foreign markets hurts performance
-- **2. Sample, Selection, Region & Timeframe:** 67 French Biotech SMEs expanding internationally, tracked across 412 firm-year observations (2010–2018) in France; Dissertation at Aix-Marseille University (Directed by Aldebert & Ricard; Dissertation Jury: Alex Bitektine)
-- **3. Method & Modeling:** Quantitative Panel Econometrics (Fixed-Effects Regression): Tested whether legitimacy moderates the relationship between foreign market expansion (internationalization) and financial performance
-- **4. Caveats & How Solved:** *Caveats:* Specialized biotech sector with long R&D timelines. *How Solved:* Multi-year panel tracking (412 observations) with firm fixed effects controlling for unobserved firm differences
-- **5. How you use it:** 
-  - *Context Link:* atEnA is a **cross-border (Franco-Italian)** program. Ghods proves that expanding across borders requires strong legitimacy to pay off.
-  - *Method Link:* Ghods built the 3-step arc (*Define legitimacy → Build a score → Test business outcomes*). Your thesis uses this exact arc, but tests an **experimental training intervention** as the driver!
+- **Verdict:** ✅ YES, CONFIRMED — High legitimacy helps internationalizing startups succeed; without it, going abroad hurts performance
+- **Explanation & Details:** 
+  - *Scope:* International Business & Performance (Macro-level)
+  - *What they did:* Tested whether legitimacy moderates the relationship between foreign market expansion and financial success
+  - *Sample & Timeframe:* 67 French Biotech SMEs expanding internationally, tracked across 412 firm-years (2010–2018)
+  - *Method:* Quantitative Panel Econometrics (Fixed-Effects Regression)
+  - *Caveats & Solved:* Specialized biotech sector → longitudinal panel structure controlling for firm heterogeneity
+  - *For You:* Proves why atEnA's cross-border setting requires legitimacy training; provides the measurement arc you adapt with an RCT
 
 ## THE THESIS CONTRIBUTION & JUNCTION
-- **1. The Evaluator Side:** Siraz proved how evaluators cognitively process cues inside their heads
-- **2. The Channel Side:** Aldebert proved how incubators and ecosystems transfer legitimacy
-- **3. The Measurement Side:** Schoon & Ghods proved how to operationalize the relational dyad
+- **1. The Evaluator Side (Siraz):** Proved how outside judges process cues inside their heads (External/Micro)
+- **2. The Ecosystem Side (Aldebert):** Proved how regional support structures transfer legitimacy (External/Meso)
+- **3. The Measurement Side (Schoon & Ghods):** Proved how to operationalize the relational dyad and cross-border performance effects
 - **4. YOUR ATENA THESIS:** You execute the missing **Field RCT** — testing whether training the founder actually shifts the external legitimacy judgment conferred by the evaluator`,
 
 methods: `# METHOD TOOLBOX — Systematic Operational Breakdown

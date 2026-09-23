@@ -1,6 +1,6 @@
 # Legitimacy Thesis — Simplified Guide
 
-A plain-English digest of the interactive mind map (`index.html` — open it in a browser to explore the full expandable version; raw source text in `FULL_MAP.md`).
+A plain-English digest of the interactive mind map (`map.html` — open it in a browser to explore the full expandable version; `index.html` renders this guide as a webpage; raw source text in `FULL_MAP.md`).
 
 ## The thesis in one paragraph
 

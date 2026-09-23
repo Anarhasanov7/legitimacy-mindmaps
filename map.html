@@ -1000,7 +1000,7 @@ let mm = null;
 function render(key) {
   const { root } = transformer.transform(MAPS[key]);
   if (!mm) {
-    mm = window.markmap.Markmap.create('#mindmap', { maxWidth: 500, initialExpandLevel: 3 }, root);
+    mm = window.markmap.Markmap.create('#mindmap', { maxWidth: 500, initialExpandLevel: 5 }, root);
   } else {
     mm.setData(root);
     mm.fit();

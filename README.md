@@ -160,3 +160,8 @@ Key insight: a venture's state can flip purely because the *societal yardstick* 
 | Contribution | First field RCT crossing the founder→evaluator boundary | Full network synthesis + Ghods 2021 template |
 
 **The closing line:** *Everyone studied one link of the chain. I test whether pulling on the middle link — training the founder — actually moves the last link — the judge's verdict.*
+
+## New: full paper-collection map
+
+`PAPERS_COLLECTION_MAP.md` — all 93 PDFs from the local Legitimacy repository, re-sorted by what each paper *does* for the research (foundations / evaluator side / scales / rhetoric / lifecycle / contexts / training / own working papers), with a final branch mapping each cluster onto the crowdfunding project.
+
